@@ -1,0 +1,415 @@
+{
+  "hypertension": {
+    "name": "高血压",
+    "top5": [
+      {
+        "feature": "年龄",
+        "shap": 0.9991899728775024
+      },
+      {
+        "feature": "BMI",
+        "shap": 0.4042400121688843
+      },
+      {
+        "feature": "糖化血红蛋白",
+        "shap": 0.1970899999141693
+      },
+      {
+        "feature": "生化总胆固醇",
+        "shap": 0.17112000286579132
+      },
+      {
+        "feature": "肌酐",
+        "shap": 0.164560005068779
+      }
+    ],
+    "meta_coef": [
+      {
+        "base_learner": "AdaBoost",
+        "meta_coef": 2.2684
+      },
+      {
+        "base_learner": "RF",
+        "meta_coef": 1.8976
+      },
+      {
+        "base_learner": "LR",
+        "meta_coef": 1.2772
+      },
+      {
+        "base_learner": "MLP",
+        "meta_coef": 1.0086
+      },
+      {
+        "base_learner": "XGBoost",
+        "meta_coef": 0.4996
+      },
+      {
+        "base_learner": "SVM",
+        "meta_coef": 0.412
+      },
+      {
+        "base_learner": "NB",
+        "meta_coef": -0.0411
+      },
+      {
+        "base_learner": "KNN",
+        "meta_coef": -0.0161
+      }
+    ]
+  },
+  "diabetes": {
+    "name": "糖尿病",
+    "top5": [
+      {
+        "feature": "年龄",
+        "shap": 1.508080005645752
+      },
+      {
+        "feature": "BMI",
+        "shap": 0.471780002117157
+      },
+      {
+        "feature": "生化甘油三酯",
+        "shap": 0.2990800142288208
+      },
+      {
+        "feature": "AST",
+        "shap": 0.2535899877548218
+      },
+      {
+        "feature": "钙",
+        "shap": 0.24998000264167786
+      }
+    ],
+    "meta_coef": [
+      {
+        "base_learner": "AdaBoost",
+        "meta_coef": 6.9837
+      },
+      {
+        "base_learner": "RF",
+        "meta_coef": 3.2448
+      },
+      {
+        "base_learner": "MLP",
+        "meta_coef": 1.7211
+      },
+      {
+        "base_learner": "XGBoost",
+        "meta_coef": 0.8002
+      },
+      {
+        "base_learner": "SVM",
+        "meta_coef": 0.64
+      },
+      {
+        "base_learner": "LR",
+        "meta_coef": 0.2051
+      },
+      {
+        "base_learner": "NB",
+        "meta_coef": -0.1282
+      },
+      {
+        "base_learner": "KNN",
+        "meta_coef": 0.0458
+      }
+    ]
+  },
+  "cancer": {
+    "name": "癌症",
+    "top5": [
+      {
+        "feature": "年龄",
+        "shap": 1.183899998664856
+      },
+      {
+        "feature": "红细胞",
+        "shap": 0.19894999265670776
+      },
+      {
+        "feature": "性别",
+        "shap": 0.14824999868869781
+      },
+      {
+        "feature": "淋巴细胞%",
+        "shap": 0.1455100029706955
+      },
+      {
+        "feature": "单核细胞%",
+        "shap": 0.1263899952173233
+      }
+    ],
+    "meta_coef": [
+      {
+        "base_learner": "AdaBoost",
+        "meta_coef": 4.8274
+      },
+      {
+        "base_learner": "RF",
+        "meta_coef": 3.81
+      },
+      {
+        "base_learner": "LR",
+        "meta_coef": 2.44
+      },
+      {
+        "base_learner": "MLP",
+        "meta_coef": 1.0477
+      },
+      {
+        "base_learner": "KNN",
+        "meta_coef": 0.7704
+      },
+      {
+        "base_learner": "SVM",
+        "meta_coef": 0.682
+      },
+      {
+        "base_learner": "NB",
+        "meta_coef": -0.1772
+      },
+      {
+        "base_learner": "XGBoost",
+        "meta_coef": -0.1419
+      }
+    ]
+  },
+  "chd": {
+    "name": "冠心病",
+    "top5": [
+      {
+        "feature": "年龄",
+        "shap": 1.411120057106018
+      },
+      {
+        "feature": "生化总胆固醇",
+        "shap": 0.2988699972629547
+      },
+      {
+        "feature": "血小板",
+        "shap": 0.2804799973964691
+      },
+      {
+        "feature": "RDW",
+        "shap": 0.21268999576568604
+      },
+      {
+        "feature": "白细胞",
+        "shap": 0.20784999430179596
+      }
+    ],
+    "meta_coef": [
+      {
+        "base_learner": "AdaBoost",
+        "meta_coef": 5.4051
+      },
+      {
+        "base_learner": "RF",
+        "meta_coef": 3.7374
+      },
+      {
+        "base_learner": "MLP",
+        "meta_coef": 2.0341
+      },
+      {
+        "base_learner": "LR",
+        "meta_coef": 1.182
+      },
+      {
+        "base_learner": "KNN",
+        "meta_coef": 1.1535
+      },
+      {
+        "base_learner": "NB",
+        "meta_coef": 0.7833
+      },
+      {
+        "base_learner": "SVM",
+        "meta_coef": 0.5027
+      },
+      {
+        "base_learner": "XGBoost",
+        "meta_coef": -0.3452
+      }
+    ]
+  },
+  "mi": {
+    "name": "心梗",
+    "top5": [
+      {
+        "feature": "年龄",
+        "shap": 1.3181899785995483
+      },
+      {
+        "feature": "生化总胆固醇",
+        "shap": 0.30055001378059387
+      },
+      {
+        "feature": "RDW",
+        "shap": 0.2996000051498413
+      },
+      {
+        "feature": "肌酐",
+        "shap": 0.27333998680114746
+      },
+      {
+        "feature": "白细胞",
+        "shap": 0.19171999394893646
+      }
+    ],
+    "meta_coef": [
+      {
+        "base_learner": "AdaBoost",
+        "meta_coef": 6.1381
+      },
+      {
+        "base_learner": "RF",
+        "meta_coef": 3.7265
+      },
+      {
+        "base_learner": "LR",
+        "meta_coef": 2.581
+      },
+      {
+        "base_learner": "KNN",
+        "meta_coef": 2.1359
+      },
+      {
+        "base_learner": "MLP",
+        "meta_coef": 1.5327
+      },
+      {
+        "base_learner": "XGBoost",
+        "meta_coef": 0.9118
+      },
+      {
+        "base_learner": "SVM",
+        "meta_coef": -0.6687
+      },
+      {
+        "base_learner": "NB",
+        "meta_coef": 0.3351
+      }
+    ]
+  },
+  "stroke": {
+    "name": "中风",
+    "top5": [
+      {
+        "feature": "年龄",
+        "shap": 1.0839899778366089
+      },
+      {
+        "feature": "肌酐",
+        "shap": 0.2728399932384491
+      },
+      {
+        "feature": "生化总胆固醇",
+        "shap": 0.22222000360488892
+      },
+      {
+        "feature": "HDL",
+        "shap": 0.18389999866485596
+      },
+      {
+        "feature": "RDW",
+        "shap": 0.18166999518871307
+      }
+    ],
+    "meta_coef": [
+      {
+        "base_learner": "AdaBoost",
+        "meta_coef": 4.7807
+      },
+      {
+        "base_learner": "RF",
+        "meta_coef": 3.2465
+      },
+      {
+        "base_learner": "LR",
+        "meta_coef": 2.3128
+      },
+      {
+        "base_learner": "MLP",
+        "meta_coef": 1.6741
+      },
+      {
+        "base_learner": "KNN",
+        "meta_coef": 1.6377
+      },
+      {
+        "base_learner": "NB",
+        "meta_coef": 0.7103
+      },
+      {
+        "base_learner": "SVM",
+        "meta_coef": -0.5339
+      },
+      {
+        "base_learner": "XGBoost",
+        "meta_coef": -0.1373
+      }
+    ]
+  },
+  "ckd": {
+    "name": "慢性肾病",
+    "top5": [
+      {
+        "feature": "年龄",
+        "shap": 0.42746999859809875
+      },
+      {
+        "feature": "MCV",
+        "shap": 0.22819000482559204
+      },
+      {
+        "feature": "红细胞压积",
+        "shap": 0.20798000693321228
+      },
+      {
+        "feature": "红细胞",
+        "shap": 0.20054000616073608
+      },
+      {
+        "feature": "钾",
+        "shap": 0.19657999277114868
+      }
+    ],
+    "meta_coef": [
+      {
+        "base_learner": "AdaBoost",
+        "meta_coef": 3.1391
+      },
+      {
+        "base_learner": "RF",
+        "meta_coef": 2.8889
+      },
+      {
+        "base_learner": "LR",
+        "meta_coef": 2.2449
+      },
+      {
+        "base_learner": "SVM",
+        "meta_coef": 1.1398
+      },
+      {
+        "base_learner": "MLP",
+        "meta_coef": 0.9015
+      },
+      {
+        "base_learner": "KNN",
+        "meta_coef": 0.7848
+      },
+      {
+        "base_learner": "NB",
+        "meta_coef": 0.7751
+      },
+      {
+        "base_learner": "XGBoost",
+        "meta_coef": 0.7255
+      }
+    ]
+  }
+}

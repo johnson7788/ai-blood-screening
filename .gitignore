@@ -1,0 +1,28 @@
+# 环境与缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
+
+# ============================================================
+# 由 ModelScope 分发的资产（体积较大，不纳入 Git 仓库）
+#   模型权重 68 MB + 原始数据 93 MB + 宽表 2.1 MB
+#   下载地址见 README「2.2 获取数据与模型」
+# ============================================================
+raw/
+artifacts/
+nhanes_wide.parquet
+nhanes_wide.csv
+modelscope-assets/
+
+# 推理输出
+preds.csv

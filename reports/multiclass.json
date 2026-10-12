@@ -1,0 +1,72 @@
+{
+  "classes": [
+    "cancer",
+    "diabetes",
+    "healthy",
+    "hypertension"
+  ],
+  "n_train": 9769,
+  "n_features": 33,
+  "best_subset": [
+    "AdaBoost",
+    "KNN",
+    "LR",
+    "MLP",
+    "NB",
+    "RF",
+    "XGBoost"
+  ],
+  "macro_auc_train": 0.7517,
+  "accuracy_train": 0.7473,
+  "per_class_auc_train": {
+    "cancer": 0.7421,
+    "diabetes": 0.8587,
+    "healthy": 0.6887,
+    "hypertension": 0.7174
+  },
+  "class_counts": {
+    "cancer": 288,
+    "diabetes": 315,
+    "healthy": 7299,
+    "hypertension": 1867
+  },
+  "feasibility_note": "论文1 的单标签互斥设定在系统性疾病上不适用：NHANES 训练队列中仅 26.5% 的参与者恰好患 1 种病，冠心病患者中只有 6% 是单一诊断。故多分类限定为样本量≥250 的类别；完整 7 病种筛查应使用多标签（one-vs-rest），即本项目 7 个二分类模型。",
+  "cohort_class_distribution": {
+    "internal_2017_2018": {
+      "cancer": 153,
+      "diabetes": 180,
+      "healthy": 3341,
+      "hypertension": 870
+    },
+    "external_2021_2023": {
+      "cancer": 278,
+      "diabetes": 132,
+      "healthy": 3680,
+      "hypertension": 866
+    }
+  },
+  "validation": {
+    "internal_2017_2018": {
+      "n": 4544,
+      "macro_auc": 0.7484,
+      "accuracy": 0.7348,
+      "per_class_auc": {
+        "cancer": 0.7249,
+        "diabetes": 0.8554,
+        "healthy": 0.6894,
+        "hypertension": 0.7239
+      }
+    },
+    "external_2021_2023": {
+      "n": 4956,
+      "macro_auc": 0.7525,
+      "accuracy": 0.7391,
+      "per_class_auc": {
+        "cancer": 0.7315,
+        "diabetes": 0.879,
+        "healthy": 0.6863,
+        "hypertension": 0.7134
+      }
+    }
+  }
+}

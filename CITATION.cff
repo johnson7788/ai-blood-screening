@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite it as below."
+title: "NHANES Blood-Test Multi-Disease Screening: A Replication of EyeGuard7-Style Stacking Ensembles"
+abstract: >-
+  A full replication of the multi-cohort stacking-ensemble methodology described in
+  "Large-scale screening of blinding eye diseases from routine blood tests" (EyeGuard7),
+  applied to 41,333 NHANES participants across four survey cycles (2013-2014, 2015-2016,
+  2017-2018, 2021-2023). The package includes the data pipeline, eight base learners with
+  a logistic-regression meta-learner, exhaustive search over 255 base-learner subsets,
+  recursive feature elimination to 12 features, internal plus external time-based
+  validation, SHAP interpretability analysis, and trained model weights for seven
+  diseases. Key findings include a consistent stacking gain over the best single learner
+  (+0.0080 AUC on average), preserved performance after reduction to 12 features, and a
+  quantified label-leakage inflation of +0.0708 AUC for diabetes when same-source
+  diagnostic variables are used as features.
+type: software
+authors:
+  - name: "The NHANES Blood-Test Screening Replication Authors"
+version: "1.0.0"
+date-released: "2026-10-12"
+license: MIT
+license-url: "https://opensource.org/licenses/MIT"
+keywords:
+  - NHANES
+  - routine blood tests
+  - disease screening
+  - stacking ensemble
+  - recursive feature elimination
+  - SHAP
+  - label leakage
+  - replication study
+references:
+  - type: article
+    title: "Large-scale screening of blinding eye diseases from routine blood tests"
+    journal: "Nature Health"
+    year: 2026
+    doi: "10.1038/s44360-026-00101-5"
+    notes: "The methodology replicated by this package."
+  - type: dataset
+    title: "National Health and Nutrition Examination Survey (NHANES)"
+    authors:
+      - name: "National Center for Health Statistics"
+    publisher:
+      name: "U.S. Centers for Disease Control and Prevention"
+    year: 2024
+    url: "https://wwwn.cdc.gov/nchs/nhanes/"
+    notes: "Public-domain source data used by this package."

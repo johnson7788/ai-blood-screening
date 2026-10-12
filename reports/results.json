@@ -1,0 +1,2754 @@
+[
+  {
+    "disease": "hypertension",
+    "name": "高血压",
+    "label_var": "BPQ020",
+    "feature_set": "lab_demo",
+    "ignore_leakage": false,
+    "n_train": 11380,
+    "n_features": 33,
+    "prevalence": 0.3343,
+    "weighted_prevalence": 0.3147,
+    "features": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXNEPCT",
+      "LBXEOPCT",
+      "LBXBAPCT",
+      "LBXRBCSI",
+      "LBXHGB",
+      "LBXHCT",
+      "LBXMCVSI",
+      "LBXMCHSI",
+      "LBXMC",
+      "LBXPLTSI",
+      "LBXRDW",
+      "LBXSCR",
+      "LBXSUA",
+      "LBXSBU",
+      "LBXSATSI",
+      "LBXSASSI",
+      "LBXSTB",
+      "LBXSAL",
+      "LBXSCA",
+      "LBXSNASI",
+      "LBXSKSI",
+      "LBXSGL",
+      "LBXSCH",
+      "LBXSTR",
+      "LBXGH",
+      "LBDHDD",
+      "LBXTC",
+      "RIDAGEYR",
+      "RIAGENDR",
+      "BMXBMI"
+    ],
+    "base_learner_cv_auc": {
+      "AdaBoost": 0.818,
+      "KNN": 0.793,
+      "LR": 0.8269,
+      "MLP": 0.8243,
+      "NB": 0.7794,
+      "RF": 0.8259,
+      "SVM": 0.8155,
+      "XGBoost": 0.8198
+    },
+    "best_single_learner": "LR",
+    "best_single_auc": 0.8269,
+    "subset_top10": [
+      {
+        "subset": [
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.8325,
+        "cv_std": 0.0027
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.8324,
+        "cv_std": 0.0027
+      },
+      {
+        "subset": [
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.8324,
+        "cv_std": 0.0026
+      },
+      {
+        "subset": [
+          "LR",
+          "MLP",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 4,
+        "cv_auc": 0.8324,
+        "cv_std": 0.0027
+      },
+      {
+        "subset": [
+          "LR",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.8324,
+        "cv_std": 0.0026
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 7,
+        "cv_auc": 0.8324,
+        "cv_std": 0.0026
+      },
+      {
+        "subset": [
+          "LR",
+          "MLP",
+          "RF",
+          "SVM"
+        ],
+        "n": 4,
+        "cv_auc": 0.8323,
+        "cv_std": 0.0028
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM"
+        ],
+        "n": 5,
+        "cv_auc": 0.8323,
+        "cv_std": 0.0028
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 7,
+        "cv_auc": 0.8323,
+        "cv_std": 0.0026
+      },
+      {
+        "subset": [
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.8323,
+        "cv_std": 0.0027
+      }
+    ],
+    "best_subset": [
+      "LR",
+      "MLP",
+      "RF",
+      "SVM",
+      "XGBoost"
+    ],
+    "stacking_cv_auc": 0.8325,
+    "stacking_cv_std": 0.0027,
+    "validation": {
+      "train_cv": {
+        "n": 11380,
+        "prevalence": 0.3343,
+        "weighted_prevalence": 0.3147,
+        "auc": 0.832,
+        "auc_weighted": 0.8165,
+        "auprc": 0.7088,
+        "auprc_weighted": 0.6751,
+        "threshold": 0.3165,
+        "tp": 2861,
+        "fn": 943,
+        "tn": 5760,
+        "fp": 1816,
+        "sensitivity": 0.7521,
+        "specificity": 0.7603,
+        "ppv": 0.6117,
+        "npv": 0.8593,
+        "f1": 0.6747,
+        "brier": 0.1541,
+        "ece": 0.0244
+      },
+      "internal_2017_2018": {
+        "n": 5300,
+        "prevalence": 0.3485,
+        "weighted_prevalence": 0.3065,
+        "auc": 0.8324,
+        "auc_weighted": 0.8231,
+        "auprc": 0.721,
+        "auprc_weighted": 0.6862,
+        "threshold": 0.3153,
+        "tp": 1480,
+        "fn": 367,
+        "tn": 2475,
+        "fp": 978,
+        "sensitivity": 0.8013,
+        "specificity": 0.7168,
+        "ppv": 0.6021,
+        "npv": 0.8709,
+        "f1": 0.6876,
+        "brier": 0.1567,
+        "ece": 0.0248,
+        "auc_drop_vs_train": 0.0004
+      },
+      "external_2021_2023": {
+        "n": 5681,
+        "prevalence": 0.3513,
+        "weighted_prevalence": 0.2946,
+        "auc": 0.8174,
+        "auc_weighted": 0.8214,
+        "auprc": 0.6957,
+        "auprc_weighted": 0.6617,
+        "threshold": 0.3851,
+        "tp": 1533,
+        "fn": 463,
+        "tn": 2644,
+        "fp": 1041,
+        "sensitivity": 0.768,
+        "specificity": 0.7175,
+        "ppv": 0.5956,
+        "npv": 0.851,
+        "f1": 0.6709,
+        "brier": 0.1652,
+        "ece": 0.0388,
+        "auc_drop_vs_train": -0.0146
+      }
+    },
+    "n_internal_2017_2018": 5300,
+    "n_external_2021_2023": 5681,
+    "rfe_kept": [
+      "LBXMOPCT",
+      "LBXRBCSI",
+      "LBXMCVSI",
+      "LBXSCR",
+      "LBXSCA",
+      "LBXSKSI",
+      "LBXSGL",
+      "LBXSCH",
+      "LBXSTR",
+      "LBDHDD",
+      "RIDAGEYR",
+      "BMXBMI"
+    ],
+    "rfe_history": [
+      {
+        "n_features": 33,
+        "cv_auc": 0.8231,
+        "removed": "RIAGENDR"
+      },
+      {
+        "n_features": 32,
+        "cv_auc": 0.8222,
+        "removed": "LBXSTB"
+      },
+      {
+        "n_features": 31,
+        "cv_auc": 0.8225,
+        "removed": "LBXSASSI"
+      },
+      {
+        "n_features": 30,
+        "cv_auc": 0.8235,
+        "removed": "LBXHGB"
+      },
+      {
+        "n_features": 29,
+        "cv_auc": 0.8242,
+        "removed": "LBXSBU"
+      },
+      {
+        "n_features": 28,
+        "cv_auc": 0.8237,
+        "removed": "LBXMC"
+      },
+      {
+        "n_features": 27,
+        "cv_auc": 0.8241,
+        "removed": "LBXTC"
+      },
+      {
+        "n_features": 26,
+        "cv_auc": 0.8232,
+        "removed": "LBXBAPCT"
+      },
+      {
+        "n_features": 25,
+        "cv_auc": 0.8232,
+        "removed": "LBXEOPCT"
+      },
+      {
+        "n_features": 24,
+        "cv_auc": 0.8234,
+        "removed": "LBXWBCSI"
+      },
+      {
+        "n_features": 23,
+        "cv_auc": 0.8224,
+        "removed": "LBXMCHSI"
+      },
+      {
+        "n_features": 22,
+        "cv_auc": 0.824,
+        "removed": "LBXSNASI"
+      },
+      {
+        "n_features": 21,
+        "cv_auc": 0.8232,
+        "removed": "LBXSAL"
+      },
+      {
+        "n_features": 20,
+        "cv_auc": 0.8216,
+        "removed": "LBXHCT"
+      },
+      {
+        "n_features": 19,
+        "cv_auc": 0.8223,
+        "removed": "LBXSATSI"
+      },
+      {
+        "n_features": 18,
+        "cv_auc": 0.8223,
+        "removed": "LBXLYPCT"
+      },
+      {
+        "n_features": 17,
+        "cv_auc": 0.823,
+        "removed": "LBXGH"
+      },
+      {
+        "n_features": 16,
+        "cv_auc": 0.8209,
+        "removed": "LBXNEPCT"
+      },
+      {
+        "n_features": 15,
+        "cv_auc": 0.8195,
+        "removed": "LBXRDW"
+      },
+      {
+        "n_features": 14,
+        "cv_auc": 0.8214,
+        "removed": "LBXSUA"
+      },
+      {
+        "n_features": 13,
+        "cv_auc": 0.8196,
+        "removed": "LBXPLTSI"
+      }
+    ],
+    "rfe_best_subset": [
+      "LR",
+      "MLP",
+      "RF"
+    ],
+    "rfe_cv_auc": 0.8276,
+    "rfe_cv_std": 0.0038,
+    "rfe_auc_delta": -0.0049,
+    "rfe_validation": {
+      "internal_2017_2018": 0.8286,
+      "external_2021_2023": 0.8149
+    },
+    "elapsed_sec": 207.0
+  },
+  {
+    "disease": "diabetes",
+    "name": "糖尿病",
+    "label_var": "DIQ010",
+    "feature_set": "lab_demo",
+    "ignore_leakage": false,
+    "n_train": 12262,
+    "n_features": 31,
+    "prevalence": 0.1148,
+    "weighted_prevalence": 0.0958,
+    "features": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXNEPCT",
+      "LBXEOPCT",
+      "LBXBAPCT",
+      "LBXRBCSI",
+      "LBXHGB",
+      "LBXHCT",
+      "LBXMCVSI",
+      "LBXMCHSI",
+      "LBXMC",
+      "LBXPLTSI",
+      "LBXRDW",
+      "LBXSCR",
+      "LBXSUA",
+      "LBXSBU",
+      "LBXSATSI",
+      "LBXSASSI",
+      "LBXSTB",
+      "LBXSAL",
+      "LBXSCA",
+      "LBXSNASI",
+      "LBXSKSI",
+      "LBXSCH",
+      "LBXSTR",
+      "LBDHDD",
+      "LBXTC",
+      "RIDAGEYR",
+      "RIAGENDR",
+      "BMXBMI"
+    ],
+    "base_learner_cv_auc": {
+      "AdaBoost": 0.8637,
+      "KNN": 0.8225,
+      "LR": 0.8629,
+      "MLP": 0.8628,
+      "NB": 0.8226,
+      "RF": 0.8717,
+      "SVM": 0.8465,
+      "XGBoost": 0.8727
+    },
+    "best_single_learner": "XGBoost",
+    "best_single_auc": 0.8727,
+    "subset_top10": [
+      {
+        "subset": [
+          "AdaBoost",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.8818,
+        "cv_std": 0.0052
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.8818,
+        "cv_std": 0.0052
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 7,
+        "cv_auc": 0.8817,
+        "cv_std": 0.0053
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 7,
+        "cv_auc": 0.8817,
+        "cv_std": 0.005
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.8817,
+        "cv_std": 0.0052
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 8,
+        "cv_auc": 0.8816,
+        "cv_std": 0.005
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.8816,
+        "cv_std": 0.005
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM"
+        ],
+        "n": 5,
+        "cv_auc": 0.8815,
+        "cv_std": 0.0053
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 7,
+        "cv_auc": 0.8815,
+        "cv_std": 0.0051
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM"
+        ],
+        "n": 6,
+        "cv_auc": 0.8814,
+        "cv_std": 0.0053
+      }
+    ],
+    "best_subset": [
+      "AdaBoost",
+      "MLP",
+      "NB",
+      "RF",
+      "SVM",
+      "XGBoost"
+    ],
+    "stacking_cv_auc": 0.8818,
+    "stacking_cv_std": 0.0052,
+    "validation": {
+      "train_cv": {
+        "n": 12262,
+        "prevalence": 0.1148,
+        "weighted_prevalence": 0.0958,
+        "auc": 0.8819,
+        "auc_weighted": 0.8791,
+        "auprc": 0.5227,
+        "auprc_weighted": 0.4928,
+        "threshold": 0.0997,
+        "tp": 1130,
+        "fn": 278,
+        "tn": 8689,
+        "fp": 2165,
+        "sensitivity": 0.8026,
+        "specificity": 0.8005,
+        "ppv": 0.3429,
+        "npv": 0.969,
+        "f1": 0.4805,
+        "brier": 0.0736,
+        "ece": 0.0203
+      },
+      "internal_2017_2018": {
+        "n": 5616,
+        "prevalence": 0.1387,
+        "weighted_prevalence": 0.1071,
+        "auc": 0.8755,
+        "auc_weighted": 0.8795,
+        "auprc": 0.559,
+        "auprc_weighted": 0.5379,
+        "threshold": 0.1174,
+        "tp": 637,
+        "fn": 142,
+        "tn": 3825,
+        "fp": 1012,
+        "sensitivity": 0.8177,
+        "specificity": 0.7908,
+        "ppv": 0.3863,
+        "npv": 0.9642,
+        "f1": 0.5247,
+        "brier": 0.0865,
+        "ece": 0.0282,
+        "auc_drop_vs_train": -0.0064
+      },
+      "external_2021_2023": {
+        "n": 5925,
+        "prevalence": 0.1237,
+        "weighted_prevalence": 0.1039,
+        "auc": 0.8856,
+        "auc_weighted": 0.8938,
+        "auprc": 0.5503,
+        "auprc_weighted": 0.5413,
+        "threshold": 0.1377,
+        "tp": 609,
+        "fn": 124,
+        "tn": 4050,
+        "fp": 1142,
+        "sensitivity": 0.8308,
+        "specificity": 0.78,
+        "ppv": 0.3478,
+        "npv": 0.9703,
+        "f1": 0.4903,
+        "brier": 0.0791,
+        "ece": 0.0348,
+        "auc_drop_vs_train": 0.0037
+      }
+    },
+    "n_internal_2017_2018": 5616,
+    "n_external_2021_2023": 5925,
+    "rfe_kept": [
+      "LBXMOPCT",
+      "LBXMCVSI",
+      "LBXMC",
+      "LBXSCR",
+      "LBXSATSI",
+      "LBXSASSI",
+      "LBXSCA",
+      "LBXSNASI",
+      "LBXSCH",
+      "LBXSTR",
+      "RIDAGEYR",
+      "BMXBMI"
+    ],
+    "rfe_history": [
+      {
+        "n_features": 31,
+        "cv_auc": 0.8757,
+        "removed": "LBXSTB"
+      },
+      {
+        "n_features": 30,
+        "cv_auc": 0.8775,
+        "removed": "LBXSBU"
+      },
+      {
+        "n_features": 29,
+        "cv_auc": 0.8764,
+        "removed": "LBXBAPCT"
+      },
+      {
+        "n_features": 28,
+        "cv_auc": 0.876,
+        "removed": "LBXRDW"
+      },
+      {
+        "n_features": 27,
+        "cv_auc": 0.8766,
+        "removed": "LBXHGB"
+      },
+      {
+        "n_features": 26,
+        "cv_auc": 0.8794,
+        "removed": "RIAGENDR"
+      },
+      {
+        "n_features": 25,
+        "cv_auc": 0.8762,
+        "removed": "LBXMCHSI"
+      },
+      {
+        "n_features": 24,
+        "cv_auc": 0.8753,
+        "removed": "LBXLYPCT"
+      },
+      {
+        "n_features": 23,
+        "cv_auc": 0.8764,
+        "removed": "LBXTC"
+      },
+      {
+        "n_features": 22,
+        "cv_auc": 0.8753,
+        "removed": "LBXSAL"
+      },
+      {
+        "n_features": 21,
+        "cv_auc": 0.8743,
+        "removed": "LBDHDD"
+      },
+      {
+        "n_features": 20,
+        "cv_auc": 0.8763,
+        "removed": "LBXRBCSI"
+      },
+      {
+        "n_features": 19,
+        "cv_auc": 0.8728,
+        "removed": "LBXWBCSI"
+      },
+      {
+        "n_features": 18,
+        "cv_auc": 0.8758,
+        "removed": "LBXEOPCT"
+      },
+      {
+        "n_features": 17,
+        "cv_auc": 0.877,
+        "removed": "LBXNEPCT"
+      },
+      {
+        "n_features": 16,
+        "cv_auc": 0.8753,
+        "removed": "LBXHCT"
+      },
+      {
+        "n_features": 15,
+        "cv_auc": 0.8746,
+        "removed": "LBXSKSI"
+      },
+      {
+        "n_features": 14,
+        "cv_auc": 0.873,
+        "removed": "LBXSUA"
+      },
+      {
+        "n_features": 13,
+        "cv_auc": 0.8719,
+        "removed": "LBXPLTSI"
+      }
+    ],
+    "rfe_best_subset": [
+      "AdaBoost",
+      "LR",
+      "MLP",
+      "NB",
+      "RF",
+      "XGBoost"
+    ],
+    "rfe_cv_auc": 0.8761,
+    "rfe_cv_std": 0.0032,
+    "rfe_auc_delta": -0.0057,
+    "rfe_validation": {
+      "internal_2017_2018": 0.8669,
+      "external_2021_2023": 0.8712
+    },
+    "elapsed_sec": 184.2,
+    "leakage_control": {
+      "n_features": 33,
+      "cv_auc_with_leakage": 0.9526,
+      "cv_auc_without_leakage": 0.8818,
+      "inflation": 0.0708,
+      "external_with_leakage": 0.9635,
+      "external_without_leakage": 0.8856,
+      "leaked_features": [
+        "LBXSGL",
+        "LBXGH"
+      ]
+    }
+  },
+  {
+    "disease": "cancer",
+    "name": "癌症",
+    "label_var": "MCQ220",
+    "feature_set": "lab_demo",
+    "ignore_leakage": false,
+    "n_train": 10272,
+    "n_features": 33,
+    "prevalence": 0.0922,
+    "weighted_prevalence": 0.1079,
+    "features": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXNEPCT",
+      "LBXEOPCT",
+      "LBXBAPCT",
+      "LBXRBCSI",
+      "LBXHGB",
+      "LBXHCT",
+      "LBXMCVSI",
+      "LBXMCHSI",
+      "LBXMC",
+      "LBXPLTSI",
+      "LBXRDW",
+      "LBXSCR",
+      "LBXSUA",
+      "LBXSBU",
+      "LBXSATSI",
+      "LBXSASSI",
+      "LBXSTB",
+      "LBXSAL",
+      "LBXSCA",
+      "LBXSNASI",
+      "LBXSKSI",
+      "LBXSGL",
+      "LBXSCH",
+      "LBXSTR",
+      "LBXGH",
+      "LBDHDD",
+      "LBXTC",
+      "RIDAGEYR",
+      "RIAGENDR",
+      "BMXBMI"
+    ],
+    "base_learner_cv_auc": {
+      "AdaBoost": 0.7842,
+      "KNN": 0.7279,
+      "LR": 0.7914,
+      "MLP": 0.6882,
+      "NB": 0.7498,
+      "RF": 0.7793,
+      "SVM": 0.7025,
+      "XGBoost": 0.7685
+    },
+    "best_single_learner": "LR",
+    "best_single_auc": 0.7914,
+    "subset_top10": [
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM"
+        ],
+        "n": 5,
+        "cv_auc": 0.7975,
+        "cv_std": 0.0109
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.7974,
+        "cv_std": 0.0109
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM"
+        ],
+        "n": 6,
+        "cv_auc": 0.7973,
+        "cv_std": 0.0108
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "NB",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 7,
+        "cv_auc": 0.7972,
+        "cv_std": 0.0107
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF"
+        ],
+        "n": 4,
+        "cv_auc": 0.797,
+        "cv_std": 0.0109
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.797,
+        "cv_std": 0.011
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "NB",
+          "RF"
+        ],
+        "n": 5,
+        "cv_auc": 0.7968,
+        "cv_std": 0.0107
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "SVM"
+        ],
+        "n": 4,
+        "cv_auc": 0.7968,
+        "cv_std": 0.0104
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "NB",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.7967,
+        "cv_std": 0.0109
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM"
+        ],
+        "n": 6,
+        "cv_auc": 0.7967,
+        "cv_std": 0.0114
+      }
+    ],
+    "best_subset": [
+      "AdaBoost",
+      "LR",
+      "MLP",
+      "RF",
+      "SVM"
+    ],
+    "stacking_cv_auc": 0.7975,
+    "stacking_cv_std": 0.0109,
+    "validation": {
+      "train_cv": {
+        "n": 10272,
+        "prevalence": 0.0922,
+        "weighted_prevalence": 0.1079,
+        "auc": 0.7965,
+        "auc_weighted": 0.7919,
+        "auprc": 0.27,
+        "auprc_weighted": 0.2983,
+        "threshold": 0.0741,
+        "tp": 733,
+        "fn": 214,
+        "tn": 6384,
+        "fp": 2941,
+        "sensitivity": 0.774,
+        "specificity": 0.6846,
+        "ppv": 0.1995,
+        "npv": 0.9676,
+        "f1": 0.3172,
+        "brier": 0.0752,
+        "ece": 0.0123
+      },
+      "internal_2017_2018": {
+        "n": 4816,
+        "prevalence": 0.1003,
+        "weighted_prevalence": 0.1066,
+        "auc": 0.7849,
+        "auc_weighted": 0.78,
+        "auprc": 0.2943,
+        "auprc_weighted": 0.2907,
+        "threshold": 0.0776,
+        "tp": 376,
+        "fn": 107,
+        "tn": 2859,
+        "fp": 1474,
+        "sensitivity": 0.7785,
+        "specificity": 0.6598,
+        "ppv": 0.2032,
+        "npv": 0.9639,
+        "f1": 0.3223,
+        "brier": 0.0803,
+        "ece": 0.0093,
+        "auc_drop_vs_train": -0.0116
+      },
+      "external_2021_2023": {
+        "n": 5258,
+        "prevalence": 0.1489,
+        "weighted_prevalence": 0.1139,
+        "auc": 0.7806,
+        "auc_weighted": 0.8113,
+        "auprc": 0.343,
+        "auprc_weighted": 0.3277,
+        "threshold": 0.0971,
+        "tp": 599,
+        "fn": 184,
+        "tn": 3053,
+        "fp": 1422,
+        "sensitivity": 0.765,
+        "specificity": 0.6822,
+        "ppv": 0.2964,
+        "npv": 0.9432,
+        "f1": 0.4272,
+        "brier": 0.1144,
+        "ece": 0.0409,
+        "auc_drop_vs_train": -0.0159
+      }
+    },
+    "n_internal_2017_2018": 4816,
+    "n_external_2021_2023": 5258,
+    "rfe_kept": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXEOPCT",
+      "LBXRBCSI",
+      "LBXPLTSI",
+      "LBXSUA",
+      "LBXSTR",
+      "LBXGH",
+      "LBXTC",
+      "RIDAGEYR",
+      "BMXBMI"
+    ],
+    "rfe_history": [
+      {
+        "n_features": 33,
+        "cv_auc": 0.7753,
+        "removed": "LBXSAL"
+      },
+      {
+        "n_features": 32,
+        "cv_auc": 0.7776,
+        "removed": "LBXSNASI"
+      },
+      {
+        "n_features": 31,
+        "cv_auc": 0.7773,
+        "removed": "LBXSTB"
+      },
+      {
+        "n_features": 30,
+        "cv_auc": 0.7728,
+        "removed": "LBXMC"
+      },
+      {
+        "n_features": 29,
+        "cv_auc": 0.7765,
+        "removed": "LBXSCH"
+      },
+      {
+        "n_features": 28,
+        "cv_auc": 0.7753,
+        "removed": "LBXHCT"
+      },
+      {
+        "n_features": 27,
+        "cv_auc": 0.7774,
+        "removed": "LBXSASSI"
+      },
+      {
+        "n_features": 26,
+        "cv_auc": 0.7724,
+        "removed": "RIAGENDR"
+      },
+      {
+        "n_features": 25,
+        "cv_auc": 0.7746,
+        "removed": "LBXMCHSI"
+      },
+      {
+        "n_features": 24,
+        "cv_auc": 0.7761,
+        "removed": "LBXSBU"
+      },
+      {
+        "n_features": 23,
+        "cv_auc": 0.7777,
+        "removed": "LBXSCA"
+      },
+      {
+        "n_features": 22,
+        "cv_auc": 0.7726,
+        "removed": "LBXBAPCT"
+      },
+      {
+        "n_features": 21,
+        "cv_auc": 0.7756,
+        "removed": "LBXSGL"
+      },
+      {
+        "n_features": 20,
+        "cv_auc": 0.7765,
+        "removed": "LBXSATSI"
+      },
+      {
+        "n_features": 19,
+        "cv_auc": 0.7745,
+        "removed": "LBXRDW"
+      },
+      {
+        "n_features": 18,
+        "cv_auc": 0.777,
+        "removed": "LBXNEPCT"
+      },
+      {
+        "n_features": 17,
+        "cv_auc": 0.7728,
+        "removed": "LBXHGB"
+      },
+      {
+        "n_features": 16,
+        "cv_auc": 0.7771,
+        "removed": "LBDHDD"
+      },
+      {
+        "n_features": 15,
+        "cv_auc": 0.7791,
+        "removed": "LBXMCVSI"
+      },
+      {
+        "n_features": 14,
+        "cv_auc": 0.7818,
+        "removed": "LBXSCR"
+      },
+      {
+        "n_features": 13,
+        "cv_auc": 0.7783,
+        "removed": "LBXSKSI"
+      }
+    ],
+    "rfe_best_subset": [
+      "LR",
+      "RF",
+      "XGBoost"
+    ],
+    "rfe_cv_auc": 0.7965,
+    "rfe_cv_std": 0.0121,
+    "rfe_auc_delta": -0.001,
+    "rfe_validation": {
+      "internal_2017_2018": 0.779,
+      "external_2021_2023": 0.7754
+    },
+    "elapsed_sec": 188.3
+  },
+  {
+    "disease": "chd",
+    "name": "冠心病",
+    "label_var": "MCQ160C",
+    "feature_set": "lab_demo",
+    "ignore_leakage": false,
+    "n_train": 10239,
+    "n_features": 33,
+    "prevalence": 0.04,
+    "weighted_prevalence": 0.0349,
+    "features": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXNEPCT",
+      "LBXEOPCT",
+      "LBXBAPCT",
+      "LBXRBCSI",
+      "LBXHGB",
+      "LBXHCT",
+      "LBXMCVSI",
+      "LBXMCHSI",
+      "LBXMC",
+      "LBXPLTSI",
+      "LBXRDW",
+      "LBXSCR",
+      "LBXSUA",
+      "LBXSBU",
+      "LBXSATSI",
+      "LBXSASSI",
+      "LBXSTB",
+      "LBXSAL",
+      "LBXSCA",
+      "LBXSNASI",
+      "LBXSKSI",
+      "LBXSGL",
+      "LBXSCH",
+      "LBXSTR",
+      "LBXGH",
+      "LBDHDD",
+      "LBXTC",
+      "RIDAGEYR",
+      "RIAGENDR",
+      "BMXBMI"
+    ],
+    "base_learner_cv_auc": {
+      "AdaBoost": 0.8486,
+      "KNN": 0.7729,
+      "LR": 0.8594,
+      "MLP": 0.7581,
+      "NB": 0.8289,
+      "RF": 0.8508,
+      "SVM": 0.7614,
+      "XGBoost": 0.8385
+    },
+    "best_single_learner": "LR",
+    "best_single_auc": 0.8594,
+    "subset_top10": [
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM"
+        ],
+        "n": 5,
+        "cv_auc": 0.8649,
+        "cv_std": 0.0269
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.8648,
+        "cv_std": 0.0269
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF"
+        ],
+        "n": 4,
+        "cv_auc": 0.8647,
+        "cv_std": 0.0266
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.8645,
+        "cv_std": 0.0267
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM"
+        ],
+        "n": 6,
+        "cv_auc": 0.8642,
+        "cv_std": 0.0258
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 7,
+        "cv_auc": 0.8641,
+        "cv_std": 0.0257
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF"
+        ],
+        "n": 5,
+        "cv_auc": 0.864,
+        "cv_std": 0.0257
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.8639,
+        "cv_std": 0.0257
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "MLP",
+          "RF",
+          "SVM"
+        ],
+        "n": 4,
+        "cv_auc": 0.8637,
+        "cv_std": 0.0265
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.8636,
+        "cv_std": 0.0266
+      }
+    ],
+    "best_subset": [
+      "AdaBoost",
+      "LR",
+      "MLP",
+      "RF",
+      "SVM"
+    ],
+    "stacking_cv_auc": 0.8649,
+    "stacking_cv_std": 0.0269,
+    "validation": {
+      "train_cv": {
+        "n": 10239,
+        "prevalence": 0.04,
+        "weighted_prevalence": 0.0349,
+        "auc": 0.8624,
+        "auc_weighted": 0.8718,
+        "auprc": 0.2284,
+        "auprc_weighted": 0.224,
+        "threshold": 0.0369,
+        "tp": 320,
+        "fn": 90,
+        "tn": 7681,
+        "fp": 2148,
+        "sensitivity": 0.7805,
+        "specificity": 0.7815,
+        "ppv": 0.1297,
+        "npv": 0.9884,
+        "f1": 0.2224,
+        "brier": 0.0348,
+        "ece": 0.0057
+      },
+      "internal_2017_2018": {
+        "n": 4803,
+        "prevalence": 0.0466,
+        "weighted_prevalence": 0.0427,
+        "auc": 0.8586,
+        "auc_weighted": 0.8745,
+        "auprc": 0.2146,
+        "auprc_weighted": 0.2592,
+        "threshold": 0.0376,
+        "tp": 181,
+        "fn": 43,
+        "tn": 3461,
+        "fp": 1118,
+        "sensitivity": 0.808,
+        "specificity": 0.7558,
+        "ppv": 0.1393,
+        "npv": 0.9877,
+        "f1": 0.2377,
+        "brier": 0.0406,
+        "ece": 0.0084,
+        "auc_drop_vs_train": -0.0038
+      },
+      "external_2021_2023": {
+        "n": 5244,
+        "prevalence": 0.0534,
+        "weighted_prevalence": 0.0403,
+        "auc": 0.8654,
+        "auc_weighted": 0.8944,
+        "auprc": 0.2511,
+        "auprc_weighted": 0.2646,
+        "threshold": 0.0367,
+        "tp": 242,
+        "fn": 38,
+        "tn": 3603,
+        "fp": 1361,
+        "sensitivity": 0.8643,
+        "specificity": 0.7258,
+        "ppv": 0.151,
+        "npv": 0.9896,
+        "f1": 0.257,
+        "brier": 0.046,
+        "ece": 0.0128,
+        "auc_drop_vs_train": 0.003
+      }
+    },
+    "n_internal_2017_2018": 4803,
+    "n_external_2021_2023": 5244,
+    "rfe_kept": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXHGB",
+      "LBXPLTSI",
+      "LBXRDW",
+      "LBXSCR",
+      "LBXSUA",
+      "LBXSGL",
+      "LBXSCH",
+      "LBXSTR",
+      "RIDAGEYR"
+    ],
+    "rfe_history": [
+      {
+        "n_features": 33,
+        "cv_auc": 0.8417,
+        "removed": "RIAGENDR"
+      },
+      {
+        "n_features": 32,
+        "cv_auc": 0.8459,
+        "removed": "LBXNEPCT"
+      },
+      {
+        "n_features": 31,
+        "cv_auc": 0.8451,
+        "removed": "LBXSCA"
+      },
+      {
+        "n_features": 30,
+        "cv_auc": 0.8471,
+        "removed": "LBXSNASI"
+      },
+      {
+        "n_features": 29,
+        "cv_auc": 0.8413,
+        "removed": "LBXSAL"
+      },
+      {
+        "n_features": 28,
+        "cv_auc": 0.8415,
+        "removed": "LBXSBU"
+      },
+      {
+        "n_features": 27,
+        "cv_auc": 0.8406,
+        "removed": "LBXBAPCT"
+      },
+      {
+        "n_features": 26,
+        "cv_auc": 0.8473,
+        "removed": "LBXMCHSI"
+      },
+      {
+        "n_features": 25,
+        "cv_auc": 0.8489,
+        "removed": "LBXSATSI"
+      },
+      {
+        "n_features": 24,
+        "cv_auc": 0.8456,
+        "removed": "LBXTC"
+      },
+      {
+        "n_features": 23,
+        "cv_auc": 0.8476,
+        "removed": "LBXHCT"
+      },
+      {
+        "n_features": 22,
+        "cv_auc": 0.8463,
+        "removed": "LBXGH"
+      },
+      {
+        "n_features": 21,
+        "cv_auc": 0.8491,
+        "removed": "LBXSASSI"
+      },
+      {
+        "n_features": 20,
+        "cv_auc": 0.8455,
+        "removed": "LBXMC"
+      },
+      {
+        "n_features": 19,
+        "cv_auc": 0.8446,
+        "removed": "LBXSTB"
+      },
+      {
+        "n_features": 18,
+        "cv_auc": 0.8469,
+        "removed": "LBXEOPCT"
+      },
+      {
+        "n_features": 17,
+        "cv_auc": 0.8452,
+        "removed": "LBDHDD"
+      },
+      {
+        "n_features": 16,
+        "cv_auc": 0.85,
+        "removed": "LBXRBCSI"
+      },
+      {
+        "n_features": 15,
+        "cv_auc": 0.8466,
+        "removed": "BMXBMI"
+      },
+      {
+        "n_features": 14,
+        "cv_auc": 0.8485,
+        "removed": "LBXMCVSI"
+      },
+      {
+        "n_features": 13,
+        "cv_auc": 0.8458,
+        "removed": "LBXSKSI"
+      }
+    ],
+    "rfe_best_subset": [
+      "AdaBoost",
+      "KNN",
+      "LR",
+      "RF",
+      "XGBoost"
+    ],
+    "rfe_cv_auc": 0.8667,
+    "rfe_cv_std": 0.0282,
+    "rfe_auc_delta": 0.0018,
+    "rfe_validation": {
+      "internal_2017_2018": 0.8566,
+      "external_2021_2023": 0.8607
+    },
+    "elapsed_sec": 147.7
+  },
+  {
+    "disease": "mi",
+    "name": "心梗",
+    "label_var": "MCQ160E",
+    "feature_set": "lab_demo",
+    "ignore_leakage": false,
+    "n_train": 10266,
+    "n_features": 33,
+    "prevalence": 0.0408,
+    "weighted_prevalence": 0.0329,
+    "features": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXNEPCT",
+      "LBXEOPCT",
+      "LBXBAPCT",
+      "LBXRBCSI",
+      "LBXHGB",
+      "LBXHCT",
+      "LBXMCVSI",
+      "LBXMCHSI",
+      "LBXMC",
+      "LBXPLTSI",
+      "LBXRDW",
+      "LBXSCR",
+      "LBXSUA",
+      "LBXSBU",
+      "LBXSATSI",
+      "LBXSASSI",
+      "LBXSTB",
+      "LBXSAL",
+      "LBXSCA",
+      "LBXSNASI",
+      "LBXSKSI",
+      "LBXSGL",
+      "LBXSCH",
+      "LBXSTR",
+      "LBXGH",
+      "LBDHDD",
+      "LBXTC",
+      "RIDAGEYR",
+      "RIAGENDR",
+      "BMXBMI"
+    ],
+    "base_learner_cv_auc": {
+      "AdaBoost": 0.8349,
+      "KNN": 0.7483,
+      "LR": 0.8392,
+      "MLP": 0.5717,
+      "NB": 0.807,
+      "RF": 0.8313,
+      "SVM": 0.7428,
+      "XGBoost": 0.8176
+    },
+    "best_single_learner": "LR",
+    "best_single_auc": 0.8392,
+    "subset_top10": [
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.8504,
+        "cv_std": 0.0128
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.8503,
+        "cv_std": 0.0133
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF",
+          "SVM"
+        ],
+        "n": 5,
+        "cv_auc": 0.8502,
+        "cv_std": 0.0127
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF"
+        ],
+        "n": 4,
+        "cv_auc": 0.8502,
+        "cv_std": 0.0123
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.85,
+        "cv_std": 0.0146
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "RF",
+          "SVM"
+        ],
+        "n": 4,
+        "cv_auc": 0.85,
+        "cv_std": 0.0126
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "RF"
+        ],
+        "n": 3,
+        "cv_auc": 0.85,
+        "cv_std": 0.0125
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 7,
+        "cv_auc": 0.8499,
+        "cv_std": 0.0149
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 4,
+        "cv_auc": 0.8499,
+        "cv_std": 0.0131
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM"
+        ],
+        "n": 6,
+        "cv_auc": 0.8498,
+        "cv_std": 0.0144
+      }
+    ],
+    "best_subset": [
+      "AdaBoost",
+      "KNN",
+      "LR",
+      "RF",
+      "XGBoost"
+    ],
+    "stacking_cv_auc": 0.8504,
+    "stacking_cv_std": 0.0128,
+    "validation": {
+      "train_cv": {
+        "n": 10266,
+        "prevalence": 0.0408,
+        "weighted_prevalence": 0.0329,
+        "auc": 0.8493,
+        "auc_weighted": 0.8629,
+        "auprc": 0.1934,
+        "auprc_weighted": 0.1681,
+        "threshold": 0.0426,
+        "tp": 309,
+        "fn": 110,
+        "tn": 7835,
+        "fp": 2012,
+        "sensitivity": 0.7375,
+        "specificity": 0.7957,
+        "ppv": 0.1331,
+        "npv": 0.9862,
+        "f1": 0.2255,
+        "brier": 0.0362,
+        "ece": 0.0072
+      },
+      "internal_2017_2018": {
+        "n": 4808,
+        "prevalence": 0.0491,
+        "weighted_prevalence": 0.0373,
+        "auc": 0.8265,
+        "auc_weighted": 0.8435,
+        "auprc": 0.1862,
+        "auprc_weighted": 0.1734,
+        "threshold": 0.038,
+        "tp": 193,
+        "fn": 43,
+        "tn": 3143,
+        "fp": 1429,
+        "sensitivity": 0.8178,
+        "specificity": 0.6874,
+        "ppv": 0.119,
+        "npv": 0.9865,
+        "f1": 0.2078,
+        "brier": 0.0439,
+        "ece": 0.0079,
+        "auc_drop_vs_train": -0.0228
+      },
+      "external_2021_2023": {
+        "n": 5255,
+        "prevalence": 0.0422,
+        "weighted_prevalence": 0.0323,
+        "auc": 0.852,
+        "auc_weighted": 0.8634,
+        "auprc": 0.2037,
+        "auprc_weighted": 0.2047,
+        "threshold": 0.0518,
+        "tp": 167,
+        "fn": 55,
+        "tn": 4019,
+        "fp": 1014,
+        "sensitivity": 0.7523,
+        "specificity": 0.7985,
+        "ppv": 0.1414,
+        "npv": 0.9865,
+        "f1": 0.2381,
+        "brier": 0.037,
+        "ece": 0.0121,
+        "auc_drop_vs_train": 0.0027
+      }
+    },
+    "n_internal_2017_2018": 4808,
+    "n_external_2021_2023": 5255,
+    "rfe_kept": [
+      "LBXLYPCT",
+      "LBXRBCSI",
+      "LBXMCVSI",
+      "LBXMC",
+      "LBXRDW",
+      "LBXSCR",
+      "LBXSUA",
+      "LBXSGL",
+      "LBXSCH",
+      "LBDHDD",
+      "RIDAGEYR",
+      "BMXBMI"
+    ],
+    "rfe_history": [
+      {
+        "n_features": 33,
+        "cv_auc": 0.8244,
+        "removed": "RIAGENDR"
+      },
+      {
+        "n_features": 32,
+        "cv_auc": 0.8249,
+        "removed": "LBXSNASI"
+      },
+      {
+        "n_features": 31,
+        "cv_auc": 0.8263,
+        "removed": "LBXSTB"
+      },
+      {
+        "n_features": 30,
+        "cv_auc": 0.8223,
+        "removed": "LBXSAL"
+      },
+      {
+        "n_features": 29,
+        "cv_auc": 0.8272,
+        "removed": "LBXTC"
+      },
+      {
+        "n_features": 28,
+        "cv_auc": 0.8287,
+        "removed": "LBXMCHSI"
+      },
+      {
+        "n_features": 27,
+        "cv_auc": 0.8237,
+        "removed": "LBXSATSI"
+      },
+      {
+        "n_features": 26,
+        "cv_auc": 0.8241,
+        "removed": "LBXSKSI"
+      },
+      {
+        "n_features": 25,
+        "cv_auc": 0.8271,
+        "removed": "LBXHCT"
+      },
+      {
+        "n_features": 24,
+        "cv_auc": 0.8253,
+        "removed": "LBXNEPCT"
+      },
+      {
+        "n_features": 23,
+        "cv_auc": 0.8297,
+        "removed": "LBXEOPCT"
+      },
+      {
+        "n_features": 22,
+        "cv_auc": 0.8289,
+        "removed": "LBXBAPCT"
+      },
+      {
+        "n_features": 21,
+        "cv_auc": 0.8307,
+        "removed": "LBXSCA"
+      },
+      {
+        "n_features": 20,
+        "cv_auc": 0.8265,
+        "removed": "LBXSASSI"
+      },
+      {
+        "n_features": 19,
+        "cv_auc": 0.8294,
+        "removed": "LBXGH"
+      },
+      {
+        "n_features": 18,
+        "cv_auc": 0.8298,
+        "removed": "LBXWBCSI"
+      },
+      {
+        "n_features": 17,
+        "cv_auc": 0.8302,
+        "removed": "LBXHGB"
+      },
+      {
+        "n_features": 16,
+        "cv_auc": 0.8255,
+        "removed": "LBXMOPCT"
+      },
+      {
+        "n_features": 15,
+        "cv_auc": 0.8304,
+        "removed": "LBXPLTSI"
+      },
+      {
+        "n_features": 14,
+        "cv_auc": 0.8305,
+        "removed": "LBXSBU"
+      },
+      {
+        "n_features": 13,
+        "cv_auc": 0.8229,
+        "removed": "LBXSTR"
+      }
+    ],
+    "rfe_best_subset": [
+      "AdaBoost",
+      "LR",
+      "RF",
+      "SVM"
+    ],
+    "rfe_cv_auc": 0.8447,
+    "rfe_cv_std": 0.0142,
+    "rfe_auc_delta": -0.0057,
+    "rfe_validation": {
+      "internal_2017_2018": 0.8093,
+      "external_2021_2023": 0.8436
+    },
+    "elapsed_sec": 144.0
+  },
+  {
+    "disease": "stroke",
+    "name": "中风",
+    "label_var": "MCQ160F",
+    "feature_set": "lab_demo",
+    "ignore_leakage": false,
+    "n_train": 10269,
+    "n_features": 33,
+    "prevalence": 0.0343,
+    "weighted_prevalence": 0.0274,
+    "features": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXNEPCT",
+      "LBXEOPCT",
+      "LBXBAPCT",
+      "LBXRBCSI",
+      "LBXHGB",
+      "LBXHCT",
+      "LBXMCVSI",
+      "LBXMCHSI",
+      "LBXMC",
+      "LBXPLTSI",
+      "LBXRDW",
+      "LBXSCR",
+      "LBXSUA",
+      "LBXSBU",
+      "LBXSATSI",
+      "LBXSASSI",
+      "LBXSTB",
+      "LBXSAL",
+      "LBXSCA",
+      "LBXSNASI",
+      "LBXSKSI",
+      "LBXSGL",
+      "LBXSCH",
+      "LBXSTR",
+      "LBXGH",
+      "LBDHDD",
+      "LBXTC",
+      "RIDAGEYR",
+      "RIAGENDR",
+      "BMXBMI"
+    ],
+    "base_learner_cv_auc": {
+      "AdaBoost": 0.7657,
+      "KNN": 0.6774,
+      "LR": 0.7834,
+      "MLP": 0.5645,
+      "NB": 0.7442,
+      "RF": 0.7693,
+      "SVM": 0.6315,
+      "XGBoost": 0.7265
+    },
+    "best_single_learner": "LR",
+    "best_single_auc": 0.7834,
+    "subset_top10": [
+      {
+        "subset": [
+          "LR",
+          "RF"
+        ],
+        "n": 2,
+        "cv_auc": 0.7881,
+        "cv_std": 0.0058
+      },
+      {
+        "subset": [
+          "LR",
+          "RF",
+          "SVM"
+        ],
+        "n": 3,
+        "cv_auc": 0.7874,
+        "cv_std": 0.0047
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF"
+        ],
+        "n": 4,
+        "cv_auc": 0.7871,
+        "cv_std": 0.0041
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF",
+          "SVM"
+        ],
+        "n": 5,
+        "cv_auc": 0.7871,
+        "cv_std": 0.0041
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.7869,
+        "cv_std": 0.0041
+      },
+      {
+        "subset": [
+          "KNN",
+          "LR",
+          "RF"
+        ],
+        "n": 3,
+        "cv_auc": 0.7868,
+        "cv_std": 0.0044
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.7868,
+        "cv_std": 0.0042
+      },
+      {
+        "subset": [
+          "KNN",
+          "LR",
+          "RF",
+          "SVM"
+        ],
+        "n": 4,
+        "cv_auc": 0.7865,
+        "cv_std": 0.0041
+      },
+      {
+        "subset": [
+          "LR",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 3,
+        "cv_auc": 0.7865,
+        "cv_std": 0.0049
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "RF"
+        ],
+        "n": 3,
+        "cv_auc": 0.7863,
+        "cv_std": 0.0034
+      }
+    ],
+    "best_subset": [
+      "LR",
+      "RF"
+    ],
+    "stacking_cv_auc": 0.7881,
+    "stacking_cv_std": 0.0058,
+    "validation": {
+      "train_cv": {
+        "n": 10269,
+        "prevalence": 0.0343,
+        "weighted_prevalence": 0.0274,
+        "auc": 0.7872,
+        "auc_weighted": 0.7974,
+        "auprc": 0.1106,
+        "auprc_weighted": 0.1033,
+        "threshold": 0.0297,
+        "tp": 287,
+        "fn": 65,
+        "tn": 6500,
+        "fp": 3417,
+        "sensitivity": 0.8153,
+        "specificity": 0.6554,
+        "ppv": 0.0775,
+        "npv": 0.9901,
+        "f1": 0.1415,
+        "brier": 0.0323,
+        "ece": 0.0018
+      },
+      "internal_2017_2018": {
+        "n": 4810,
+        "prevalence": 0.047,
+        "weighted_prevalence": 0.0317,
+        "auc": 0.7814,
+        "auc_weighted": 0.811,
+        "auprc": 0.1403,
+        "auprc_weighted": 0.1154,
+        "threshold": 0.0331,
+        "tp": 173,
+        "fn": 53,
+        "tn": 3053,
+        "fp": 1531,
+        "sensitivity": 0.7655,
+        "specificity": 0.666,
+        "ppv": 0.1015,
+        "npv": 0.9829,
+        "f1": 0.1793,
+        "brier": 0.0433,
+        "ece": 0.0099,
+        "auc_drop_vs_train": -0.0058
+      },
+      "external_2021_2023": {
+        "n": 5256,
+        "prevalence": 0.0438,
+        "weighted_prevalence": 0.0334,
+        "auc": 0.7647,
+        "auc_weighted": 0.788,
+        "auprc": 0.1235,
+        "auprc_weighted": 0.1067,
+        "threshold": 0.0347,
+        "tp": 168,
+        "fn": 62,
+        "tn": 3328,
+        "fp": 1698,
+        "sensitivity": 0.7304,
+        "specificity": 0.6622,
+        "ppv": 0.09,
+        "npv": 0.9817,
+        "f1": 0.1603,
+        "brier": 0.0406,
+        "ece": 0.0069,
+        "auc_drop_vs_train": -0.0225
+      }
+    },
+    "n_internal_2017_2018": 4810,
+    "n_external_2021_2023": 5256,
+    "rfe_kept": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXRBCSI",
+      "LBXMCHSI",
+      "LBXPLTSI",
+      "LBXSCR",
+      "LBXSBU",
+      "LBXSASSI",
+      "LBXSCH",
+      "LBDHDD",
+      "RIDAGEYR",
+      "BMXBMI"
+    ],
+    "rfe_history": [
+      {
+        "n_features": 33,
+        "cv_auc": 0.7377,
+        "removed": "LBXBAPCT"
+      },
+      {
+        "n_features": 32,
+        "cv_auc": 0.7364,
+        "removed": "RIAGENDR"
+      },
+      {
+        "n_features": 31,
+        "cv_auc": 0.7344,
+        "removed": "LBXHGB"
+      },
+      {
+        "n_features": 30,
+        "cv_auc": 0.737,
+        "removed": "LBXSNASI"
+      },
+      {
+        "n_features": 29,
+        "cv_auc": 0.7375,
+        "removed": "LBXSUA"
+      },
+      {
+        "n_features": 28,
+        "cv_auc": 0.7329,
+        "removed": "LBXSAL"
+      },
+      {
+        "n_features": 27,
+        "cv_auc": 0.7438,
+        "removed": "LBXMC"
+      },
+      {
+        "n_features": 26,
+        "cv_auc": 0.7363,
+        "removed": "LBXMOPCT"
+      },
+      {
+        "n_features": 25,
+        "cv_auc": 0.7446,
+        "removed": "LBXMCVSI"
+      },
+      {
+        "n_features": 24,
+        "cv_auc": 0.7479,
+        "removed": "LBXSATSI"
+      },
+      {
+        "n_features": 23,
+        "cv_auc": 0.7466,
+        "removed": "LBXTC"
+      },
+      {
+        "n_features": 22,
+        "cv_auc": 0.7459,
+        "removed": "LBXEOPCT"
+      },
+      {
+        "n_features": 21,
+        "cv_auc": 0.7467,
+        "removed": "LBXSTB"
+      },
+      {
+        "n_features": 20,
+        "cv_auc": 0.746,
+        "removed": "LBXSCA"
+      },
+      {
+        "n_features": 19,
+        "cv_auc": 0.737,
+        "removed": "LBXGH"
+      },
+      {
+        "n_features": 18,
+        "cv_auc": 0.7523,
+        "removed": "LBXHCT"
+      },
+      {
+        "n_features": 17,
+        "cv_auc": 0.748,
+        "removed": "LBXNEPCT"
+      },
+      {
+        "n_features": 16,
+        "cv_auc": 0.7469,
+        "removed": "LBXRDW"
+      },
+      {
+        "n_features": 15,
+        "cv_auc": 0.7459,
+        "removed": "LBXSKSI"
+      },
+      {
+        "n_features": 14,
+        "cv_auc": 0.742,
+        "removed": "LBXSGL"
+      },
+      {
+        "n_features": 13,
+        "cv_auc": 0.7476,
+        "removed": "LBXSTR"
+      }
+    ],
+    "rfe_best_subset": [
+      "LR",
+      "RF"
+    ],
+    "rfe_cv_auc": 0.7917,
+    "rfe_cv_std": 0.0087,
+    "rfe_auc_delta": 0.0036,
+    "rfe_validation": {
+      "internal_2017_2018": 0.7787,
+      "external_2021_2023": 0.7537
+    },
+    "elapsed_sec": 121.7
+  },
+  {
+    "disease": "ckd",
+    "name": "慢性肾病",
+    "label_var": "KIQ022",
+    "feature_set": "lab_demo",
+    "ignore_leakage": false,
+    "n_train": 10264,
+    "n_features": 30,
+    "prevalence": 0.0355,
+    "weighted_prevalence": 0.0287,
+    "features": [
+      "LBXWBCSI",
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXNEPCT",
+      "LBXEOPCT",
+      "LBXBAPCT",
+      "LBXRBCSI",
+      "LBXHGB",
+      "LBXHCT",
+      "LBXMCVSI",
+      "LBXMCHSI",
+      "LBXMC",
+      "LBXPLTSI",
+      "LBXRDW",
+      "LBXSATSI",
+      "LBXSASSI",
+      "LBXSTB",
+      "LBXSAL",
+      "LBXSCA",
+      "LBXSNASI",
+      "LBXSKSI",
+      "LBXSGL",
+      "LBXSCH",
+      "LBXSTR",
+      "LBXGH",
+      "LBDHDD",
+      "LBXTC",
+      "RIDAGEYR",
+      "RIAGENDR",
+      "BMXBMI"
+    ],
+    "base_learner_cv_auc": {
+      "AdaBoost": 0.7392,
+      "KNN": 0.6462,
+      "LR": 0.7504,
+      "MLP": 0.5805,
+      "NB": 0.7249,
+      "RF": 0.7414,
+      "SVM": 0.658,
+      "XGBoost": 0.72
+    },
+    "best_single_learner": "LR",
+    "best_single_auc": 0.7504,
+    "subset_top10": [
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "RF",
+          "SVM"
+        ],
+        "n": 4,
+        "cv_auc": 0.7639,
+        "cv_std": 0.0191
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.7638,
+        "cv_std": 0.0188
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "RF"
+        ],
+        "n": 3,
+        "cv_auc": 0.7631,
+        "cv_std": 0.0197
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 4,
+        "cv_auc": 0.7629,
+        "cv_std": 0.0191
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.7617,
+        "cv_std": 0.0179
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF",
+          "SVM"
+        ],
+        "n": 5,
+        "cv_auc": 0.7616,
+        "cv_std": 0.0181
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM"
+        ],
+        "n": 5,
+        "cv_auc": 0.7613,
+        "cv_std": 0.0178
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF",
+          "SVM",
+          "XGBoost"
+        ],
+        "n": 6,
+        "cv_auc": 0.761,
+        "cv_std": 0.0177
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "LR",
+          "MLP",
+          "RF"
+        ],
+        "n": 4,
+        "cv_auc": 0.7607,
+        "cv_std": 0.0186
+      },
+      {
+        "subset": [
+          "AdaBoost",
+          "KNN",
+          "LR",
+          "RF",
+          "XGBoost"
+        ],
+        "n": 5,
+        "cv_auc": 0.7604,
+        "cv_std": 0.018
+      }
+    ],
+    "best_subset": [
+      "AdaBoost",
+      "LR",
+      "RF",
+      "SVM"
+    ],
+    "stacking_cv_auc": 0.7639,
+    "stacking_cv_std": 0.0191,
+    "validation": {
+      "train_cv": {
+        "n": 10264,
+        "prevalence": 0.0355,
+        "weighted_prevalence": 0.0287,
+        "auc": 0.7637,
+        "auc_weighted": 0.7404,
+        "auprc": 0.1777,
+        "auprc_weighted": 0.1429,
+        "threshold": 0.034,
+        "tp": 226,
+        "fn": 138,
+        "tn": 7644,
+        "fp": 2256,
+        "sensitivity": 0.6209,
+        "specificity": 0.7721,
+        "ppv": 0.0911,
+        "npv": 0.9823,
+        "f1": 0.1588,
+        "brier": 0.0321,
+        "ece": 0.0033
+      },
+      "internal_2017_2018": {
+        "n": 4810,
+        "prevalence": 0.0391,
+        "weighted_prevalence": 0.0289,
+        "auc": 0.7813,
+        "auc_weighted": 0.7463,
+        "auprc": 0.1648,
+        "auprc_weighted": 0.0986,
+        "threshold": 0.0312,
+        "tp": 143,
+        "fn": 45,
+        "tn": 3071,
+        "fp": 1551,
+        "sensitivity": 0.7606,
+        "specificity": 0.6644,
+        "ppv": 0.0844,
+        "npv": 0.9856,
+        "f1": 0.152,
+        "brier": 0.0357,
+        "ece": 0.0036,
+        "auc_drop_vs_train": 0.0176
+      },
+      "external_2021_2023": {
+        "n": 5254,
+        "prevalence": 0.036,
+        "weighted_prevalence": 0.0276,
+        "auc": 0.7714,
+        "auc_weighted": 0.7855,
+        "auprc": 0.1467,
+        "auprc_weighted": 0.1362,
+        "threshold": 0.0492,
+        "tp": 99,
+        "fn": 90,
+        "tn": 4463,
+        "fp": 602,
+        "sensitivity": 0.5238,
+        "specificity": 0.8811,
+        "ppv": 0.1412,
+        "npv": 0.9802,
+        "f1": 0.2225,
+        "brier": 0.0333,
+        "ece": 0.005,
+        "auc_drop_vs_train": 0.0077
+      }
+    },
+    "n_internal_2017_2018": 4810,
+    "n_external_2021_2023": 5254,
+    "rfe_kept": [
+      "LBXLYPCT",
+      "LBXMOPCT",
+      "LBXRBCSI",
+      "LBXHCT",
+      "LBXMCVSI",
+      "LBXMC",
+      "LBXPLTSI",
+      "LBXSKSI",
+      "LBXSTR",
+      "LBDHDD",
+      "RIDAGEYR",
+      "BMXBMI"
+    ],
+    "rfe_history": [
+      {
+        "n_features": 30,
+        "cv_auc": 0.7206,
+        "removed": "RIAGENDR"
+      },
+      {
+        "n_features": 29,
+        "cv_auc": 0.735,
+        "removed": "LBXSAL"
+      },
+      {
+        "n_features": 28,
+        "cv_auc": 0.7338,
+        "removed": "LBXHGB"
+      },
+      {
+        "n_features": 27,
+        "cv_auc": 0.7217,
+        "removed": "LBXSNASI"
+      },
+      {
+        "n_features": 26,
+        "cv_auc": 0.7229,
+        "removed": "LBXSCA"
+      },
+      {
+        "n_features": 25,
+        "cv_auc": 0.7295,
+        "removed": "LBXSTB"
+      },
+      {
+        "n_features": 24,
+        "cv_auc": 0.7309,
+        "removed": "LBXSGL"
+      },
+      {
+        "n_features": 23,
+        "cv_auc": 0.7242,
+        "removed": "LBXRDW"
+      },
+      {
+        "n_features": 22,
+        "cv_auc": 0.7211,
+        "removed": "LBXSATSI"
+      },
+      {
+        "n_features": 21,
+        "cv_auc": 0.7195,
+        "removed": "LBXMCHSI"
+      },
+      {
+        "n_features": 20,
+        "cv_auc": 0.7251,
+        "removed": "LBXSASSI"
+      },
+      {
+        "n_features": 19,
+        "cv_auc": 0.7164,
+        "removed": "LBXBAPCT"
+      },
+      {
+        "n_features": 18,
+        "cv_auc": 0.7149,
+        "removed": "LBXSCH"
+      },
+      {
+        "n_features": 17,
+        "cv_auc": 0.7142,
+        "removed": "LBXTC"
+      },
+      {
+        "n_features": 16,
+        "cv_auc": 0.7169,
+        "removed": "LBXWBCSI"
+      },
+      {
+        "n_features": 15,
+        "cv_auc": 0.7181,
+        "removed": "LBXNEPCT"
+      },
+      {
+        "n_features": 14,
+        "cv_auc": 0.7246,
+        "removed": "LBXEOPCT"
+      },
+      {
+        "n_features": 13,
+        "cv_auc": 0.713,
+        "removed": "LBXGH"
+      }
+    ],
+    "rfe_best_subset": [
+      "AdaBoost",
+      "LR",
+      "NB",
+      "RF"
+    ],
+    "rfe_cv_auc": 0.7523,
+    "rfe_cv_std": 0.0254,
+    "rfe_auc_delta": -0.0116,
+    "rfe_validation": {
+      "internal_2017_2018": 0.7722,
+      "external_2021_2023": 0.7492
+    },
+    "elapsed_sec": 136.6,
+    "leakage_control": {
+      "n_features": 33,
+      "cv_auc_with_leakage": 0.8067,
+      "cv_auc_without_leakage": 0.7639,
+      "inflation": 0.0428,
+      "external_with_leakage": 0.839,
+      "external_without_leakage": 0.7714,
+      "leaked_features": [
+        "LBXSCR",
+        "LBXSUA",
+        "LBXSBU"
+      ]
+    }
+  }
+]

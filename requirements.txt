@@ -1,0 +1,24 @@
+# NHANES 常规血检多病种筛查 —— 复现环境
+# Python 3.12（推荐 3.12.x；3.13/3.14 下部分依赖暂无预编译轮子）
+#
+# macOS 额外系统依赖（XGBoost 需要 OpenMP 运行时，缺失会导致 import xgboost 报错）：
+#     brew install libomp
+#
+# 安装：
+#     python3.12 -m venv .venv
+#     .venv/bin/pip install -r requirements.txt
+
+# 核心建模
+scikit-learn==1.9.1
+xgboost==3.4.1
+shap==0.53.0
+
+# 数据处理
+pandas==3.0.6
+numpy==2.5.4
+pyarrow==26.0.0
+scipy==1.18.1
+
+# 持久化与绘图
+joblib==1.6.0
+matplotlib==3.11.2
