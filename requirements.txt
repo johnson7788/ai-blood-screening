@@ -8,17 +8,37 @@
 #     python3.12 -m venv .venv
 #     .venv/bin/pip install -r requirements.txt
 
-# 核心建模
+# ---------- 核心：数据管线 + 堆叠集成 ----------
 scikit-learn==1.9.1
 xgboost==3.4.1
-shap==0.53.0
-
-# 数据处理
 pandas==3.0.6
 numpy==2.5.4
 pyarrow==26.0.0
 scipy==1.18.1
-
-# 持久化与绘图
 joblib==1.6.0
+
+# ---------- 可解释性分析 ----------
+# EBM（Explainable Boosting Machine）：完全可加性玻璃盒模型
+interpret==0.7.8
+# Morris 全局敏感性分析
+SALib==1.6.0
+# SHAP 值
+shap==0.53.0
+
+# ---------- 绘图 ----------
 matplotlib==3.11.2
+
+# ============================================================
+# 可选：候选方案对比（体积大，按需安装）
+# ============================================================
+# TabPFN —— 表格基础模型（精度最高，但有三个硬约束，见 reports/compare_report.md）
+#   1. 需一次性许可：https://ux.priorlabs.ai 的 Licenses 标签页接受协议
+#   2. 本机实测：MPS 在 11.4k 样本显存溢出；CPU 默认拒绝 >5,000 样本
+#   3. 推理极慢（5,000 行约 213 秒）
+#   安装：pip install tabpfn
+#   运行：export TABPFN_TOKEN=... && export CMP_SUBSAMPLE=5000
+#
+# AutoGluon —— 自动集成
+#   注意：其 GBDT 后端（GBM/XGB）在 macOS + Homebrew libomp 下会 SIGSEGV，
+#   本仓库的对比脚本已限制为安全子集 RF/XT/KNN/LR/NN_TORCH/REALMLP/TABM
+#   安装：pip install "autogluon.tabular[all]"（会自动降级 pandas 到 2.x）

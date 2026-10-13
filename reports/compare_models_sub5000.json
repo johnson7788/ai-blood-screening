@@ -1,0 +1,576 @@
+[
+  {
+    "model": "ebm",
+    "model_label": "EBM（可解释加性模型）",
+    "disease": "hypertension",
+    "name": "高血压",
+    "n_train": 5000,
+    "n_full": 11380,
+    "n_features": 33,
+    "train_cv_auc": 0.8313,
+    "train_cv_auc_weighted": 0.8183,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 5300,
+        "auc": 0.8348,
+        "auc_weighted": 0.8263,
+        "auprc": 0.7239,
+        "sensitivity": 0.7374,
+        "specificity": 0.7834,
+        "ppv": 0.6455,
+        "npv": 0.848,
+        "brier": 0.1552,
+        "ece": 0.0169,
+        "threshold": 0.415073
+      },
+      "external_2021_2023": {
+        "n": 5681,
+        "auc": 0.8104,
+        "auc_weighted": 0.8143,
+        "auprc": 0.6865,
+        "sensitivity": 0.755,
+        "specificity": 0.721,
+        "ppv": 0.5945,
+        "npv": 0.8446,
+        "brier": 0.1683,
+        "ece": 0.0386,
+        "threshold": 0.412762
+      }
+    },
+    "auc_drop_vs_train": -0.0209,
+    "elapsed_sec": 30.8
+  },
+  {
+    "model": "ebm",
+    "model_label": "EBM（可解释加性模型）",
+    "disease": "diabetes",
+    "name": "糖尿病",
+    "n_train": 5000,
+    "n_full": 12262,
+    "n_features": 31,
+    "train_cv_auc": 0.8731,
+    "train_cv_auc_weighted": 0.8716,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 5616,
+        "auc": 0.8614,
+        "auc_weighted": 0.8614,
+        "auprc": 0.5173,
+        "sensitivity": 0.7882,
+        "specificity": 0.7957,
+        "ppv": 0.3833,
+        "npv": 0.9589,
+        "brier": 0.0888,
+        "ece": 0.0125,
+        "threshold": 0.177004
+      },
+      "external_2021_2023": {
+        "n": 5925,
+        "auc": 0.8682,
+        "auc_weighted": 0.8727,
+        "auprc": 0.515,
+        "sensitivity": 0.7735,
+        "specificity": 0.7864,
+        "ppv": 0.3383,
+        "npv": 0.9609,
+        "brier": 0.0823,
+        "ece": 0.0405,
+        "threshold": 0.216757
+      }
+    },
+    "auc_drop_vs_train": -0.0049,
+    "elapsed_sec": 26.3
+  },
+  {
+    "model": "ebm",
+    "model_label": "EBM（可解释加性模型）",
+    "disease": "cancer",
+    "name": "癌症",
+    "n_train": 5000,
+    "n_full": 10272,
+    "n_features": 33,
+    "train_cv_auc": 0.784,
+    "train_cv_auc_weighted": 0.7835,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4816,
+        "auc": 0.7785,
+        "auc_weighted": 0.7755,
+        "auprc": 0.2978,
+        "sensitivity": 0.8012,
+        "specificity": 0.6356,
+        "ppv": 0.1968,
+        "npv": 0.9663,
+        "brier": 0.0803,
+        "ece": 0.0074,
+        "threshold": 0.079171
+      },
+      "external_2021_2023": {
+        "n": 5258,
+        "auc": 0.7768,
+        "auc_weighted": 0.8052,
+        "auprc": 0.3406,
+        "sensitivity": 0.8072,
+        "specificity": 0.6237,
+        "ppv": 0.2729,
+        "npv": 0.9487,
+        "brier": 0.1131,
+        "ece": 0.0334,
+        "threshold": 0.094396
+      }
+    },
+    "auc_drop_vs_train": -0.0072,
+    "elapsed_sec": 21.6
+  },
+  {
+    "model": "ebm",
+    "model_label": "EBM（可解释加性模型）",
+    "disease": "chd",
+    "name": "冠心病",
+    "n_train": 5000,
+    "n_full": 10239,
+    "n_features": 33,
+    "train_cv_auc": 0.8633,
+    "train_cv_auc_weighted": 0.8578,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4803,
+        "auc": 0.8601,
+        "auc_weighted": 0.8767,
+        "auprc": 0.2169,
+        "sensitivity": 0.8527,
+        "specificity": 0.7301,
+        "ppv": 0.1338,
+        "npv": 0.9902,
+        "brier": 0.0403,
+        "ece": 0.0083,
+        "threshold": 0.038503
+      },
+      "external_2021_2023": {
+        "n": 5244,
+        "auc": 0.8597,
+        "auc_weighted": 0.8912,
+        "auprc": 0.2334,
+        "sensitivity": 0.9,
+        "specificity": 0.6791,
+        "ppv": 0.1366,
+        "npv": 0.9918,
+        "brier": 0.0454,
+        "ece": 0.0128,
+        "threshold": 0.031018
+      }
+    },
+    "auc_drop_vs_train": -0.0036,
+    "elapsed_sec": 23.3
+  },
+  {
+    "model": "ebm",
+    "model_label": "EBM（可解释加性模型）",
+    "disease": "mi",
+    "name": "心梗",
+    "n_train": 5000,
+    "n_full": 10266,
+    "n_features": 33,
+    "train_cv_auc": 0.8401,
+    "train_cv_auc_weighted": 0.8427,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4808,
+        "auc": 0.8173,
+        "auc_weighted": 0.8397,
+        "auprc": 0.1692,
+        "sensitivity": 0.8051,
+        "specificity": 0.6927,
+        "ppv": 0.1191,
+        "npv": 0.9857,
+        "brier": 0.0442,
+        "ece": 0.0104,
+        "threshold": 0.043178
+      },
+      "external_2021_2023": {
+        "n": 5255,
+        "auc": 0.8419,
+        "auc_weighted": 0.8593,
+        "auprc": 0.1807,
+        "sensitivity": 0.8018,
+        "specificity": 0.7419,
+        "ppv": 0.1205,
+        "npv": 0.9884,
+        "brier": 0.0373,
+        "ece": 0.0127,
+        "threshold": 0.055329
+      }
+    },
+    "auc_drop_vs_train": 0.0018,
+    "elapsed_sec": 18.1
+  },
+  {
+    "model": "ebm",
+    "model_label": "EBM（可解释加性模型）",
+    "disease": "stroke",
+    "name": "中风",
+    "n_train": 5000,
+    "n_full": 10269,
+    "n_features": 33,
+    "train_cv_auc": 0.7692,
+    "train_cv_auc_weighted": 0.7642,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4810,
+        "auc": 0.7517,
+        "auc_weighted": 0.779,
+        "auprc": 0.1203,
+        "sensitivity": 0.7522,
+        "specificity": 0.6259,
+        "ppv": 0.0902,
+        "npv": 0.9809,
+        "brier": 0.0436,
+        "ece": 0.0116,
+        "threshold": 0.031355
+      },
+      "external_2021_2023": {
+        "n": 5256,
+        "auc": 0.7469,
+        "auc_weighted": 0.7672,
+        "auprc": 0.1099,
+        "sensitivity": 0.8174,
+        "specificity": 0.5601,
+        "ppv": 0.0784,
+        "npv": 0.9853,
+        "brier": 0.0408,
+        "ece": 0.0073,
+        "threshold": 0.031511
+      }
+    },
+    "auc_drop_vs_train": -0.0223,
+    "elapsed_sec": 20.3
+  },
+  {
+    "model": "ebm",
+    "model_label": "EBM（可解释加性模型）",
+    "disease": "ckd",
+    "name": "慢性肾病",
+    "n_train": 5000,
+    "n_full": 10264,
+    "n_features": 30,
+    "train_cv_auc": 0.7521,
+    "train_cv_auc_weighted": 0.7424,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4810,
+        "auc": 0.7761,
+        "auc_weighted": 0.7492,
+        "auprc": 0.1588,
+        "sensitivity": 0.6968,
+        "specificity": 0.7369,
+        "ppv": 0.0973,
+        "npv": 0.9835,
+        "brier": 0.0354,
+        "ece": 0.0035,
+        "threshold": 0.043182
+      },
+      "external_2021_2023": {
+        "n": 5254,
+        "auc": 0.7599,
+        "auc_weighted": 0.7809,
+        "auprc": 0.1426,
+        "sensitivity": 0.7037,
+        "specificity": 0.6732,
+        "ppv": 0.0744,
+        "npv": 0.9838,
+        "brier": 0.0329,
+        "ece": 0.0061,
+        "threshold": 0.038029
+      }
+    },
+    "auc_drop_vs_train": 0.0078,
+    "elapsed_sec": 15.8
+  },
+  {
+    "model": "tabpfn",
+    "model_label": "TabPFN（表格基础模型）",
+    "disease": "hypertension",
+    "name": "高血压",
+    "n_train": 5000,
+    "n_full": 11380,
+    "n_features": 33,
+    "train_cv_auc": 0.8383,
+    "train_cv_auc_weighted": 0.8256,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 5300,
+        "auc": 0.8377,
+        "auc_weighted": 0.8285,
+        "auprc": 0.7285,
+        "sensitivity": 0.7731,
+        "specificity": 0.7457,
+        "ppv": 0.6193,
+        "npv": 0.8601,
+        "brier": 0.1539,
+        "ece": 0.018,
+        "threshold": 0.380855
+      },
+      "external_2021_2023": {
+        "n": 5681,
+        "auc": 0.8176,
+        "auc_weighted": 0.8209,
+        "auprc": 0.6953,
+        "sensitivity": 0.765,
+        "specificity": 0.7216,
+        "ppv": 0.5981,
+        "npv": 0.8501,
+        "brier": 0.1645,
+        "ece": 0.031,
+        "threshold": 0.400777
+      }
+    },
+    "auc_drop_vs_train": -0.0207,
+    "elapsed_sec": 1296.6
+  },
+  {
+    "model": "tabpfn",
+    "model_label": "TabPFN（表格基础模型）",
+    "disease": "diabetes",
+    "name": "糖尿病",
+    "n_train": 5000,
+    "n_full": 12262,
+    "n_features": 31,
+    "train_cv_auc": 0.8877,
+    "train_cv_auc_weighted": 0.8863,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 5616,
+        "auc": 0.8783,
+        "auc_weighted": 0.8791,
+        "auprc": 0.5603,
+        "sensitivity": 0.8049,
+        "specificity": 0.8079,
+        "ppv": 0.403,
+        "npv": 0.9626,
+        "brier": 0.0845,
+        "ece": 0.0158,
+        "threshold": 0.188125
+      },
+      "external_2021_2023": {
+        "n": 5925,
+        "auc": 0.8911,
+        "auc_weighted": 0.9019,
+        "auprc": 0.5631,
+        "sensitivity": 0.8308,
+        "specificity": 0.782,
+        "ppv": 0.3498,
+        "npv": 0.9704,
+        "brier": 0.0782,
+        "ece": 0.0432,
+        "threshold": 0.20423
+      }
+    },
+    "auc_drop_vs_train": 0.0034,
+    "elapsed_sec": 895.1
+  },
+  {
+    "model": "tabpfn",
+    "model_label": "TabPFN（表格基础模型）",
+    "disease": "cancer",
+    "name": "癌症",
+    "n_train": 5000,
+    "n_full": 10272,
+    "n_features": 33,
+    "train_cv_auc": 0.7968,
+    "train_cv_auc_weighted": 0.7965,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4816,
+        "auc": 0.7868,
+        "auc_weighted": 0.7834,
+        "auprc": 0.3011,
+        "sensitivity": 0.7743,
+        "specificity": 0.6757,
+        "ppv": 0.2102,
+        "npv": 0.9641,
+        "brier": 0.08,
+        "ece": 0.0067,
+        "threshold": 0.100768
+      },
+      "external_2021_2023": {
+        "n": 5258,
+        "auc": 0.7813,
+        "auc_weighted": 0.8095,
+        "auprc": 0.3399,
+        "sensitivity": 0.7931,
+        "specificity": 0.6599,
+        "ppv": 0.2898,
+        "npv": 0.948,
+        "brier": 0.1124,
+        "ece": 0.0313,
+        "threshold": 0.1175
+      }
+    },
+    "auc_drop_vs_train": -0.0155,
+    "elapsed_sec": 1155.8
+  },
+  {
+    "model": "tabpfn",
+    "model_label": "TabPFN（表格基础模型）",
+    "disease": "chd",
+    "name": "冠心病",
+    "n_train": 5000,
+    "n_full": 10239,
+    "n_features": 33,
+    "train_cv_auc": 0.8687,
+    "train_cv_auc_weighted": 0.8665,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4803,
+        "auc": 0.8652,
+        "auc_weighted": 0.88,
+        "auprc": 0.2213,
+        "sensitivity": 0.8348,
+        "specificity": 0.7554,
+        "ppv": 0.1431,
+        "npv": 0.9894,
+        "brier": 0.0396,
+        "ece": 0.0037,
+        "threshold": 0.046801
+      },
+      "external_2021_2023": {
+        "n": 5244,
+        "auc": 0.8567,
+        "auc_weighted": 0.8881,
+        "auprc": 0.2339,
+        "sensitivity": 0.9071,
+        "specificity": 0.6618,
+        "ppv": 0.1314,
+        "npv": 0.9921,
+        "brier": 0.0452,
+        "ece": 0.0107,
+        "threshold": 0.028132
+      }
+    },
+    "auc_drop_vs_train": -0.012,
+    "elapsed_sec": 1174.9
+  },
+  {
+    "model": "tabpfn",
+    "model_label": "TabPFN（表格基础模型）",
+    "disease": "mi",
+    "name": "心梗",
+    "n_train": 5000,
+    "n_full": 10266,
+    "n_features": 33,
+    "train_cv_auc": 0.8497,
+    "train_cv_auc_weighted": 0.8544,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4808,
+        "auc": 0.8187,
+        "auc_weighted": 0.8451,
+        "auprc": 0.1676,
+        "sensitivity": 0.8305,
+        "specificity": 0.6993,
+        "ppv": 0.1248,
+        "npv": 0.9876,
+        "brier": 0.0434,
+        "ece": 0.0046,
+        "threshold": 0.050928
+      },
+      "external_2021_2023": {
+        "n": 5255,
+        "auc": 0.8462,
+        "auc_weighted": 0.8543,
+        "auprc": 0.1885,
+        "sensitivity": 0.8874,
+        "specificity": 0.6813,
+        "ppv": 0.1094,
+        "npv": 0.9928,
+        "brier": 0.0368,
+        "ece": 0.0123,
+        "threshold": 0.049179
+      }
+    },
+    "auc_drop_vs_train": -0.0035,
+    "elapsed_sec": 1175.5
+  },
+  {
+    "model": "tabpfn",
+    "model_label": "TabPFN（表格基础模型）",
+    "disease": "stroke",
+    "name": "中风",
+    "n_train": 5000,
+    "n_full": 10269,
+    "n_features": 33,
+    "train_cv_auc": 0.7962,
+    "train_cv_auc_weighted": 0.785,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4810,
+        "auc": 0.7867,
+        "auc_weighted": 0.8103,
+        "auprc": 0.1454,
+        "sensitivity": 0.7876,
+        "specificity": 0.6582,
+        "ppv": 0.102,
+        "npv": 0.9843,
+        "brier": 0.0424,
+        "ece": 0.0068,
+        "threshold": 0.037521
+      },
+      "external_2021_2023": {
+        "n": 5256,
+        "auc": 0.7713,
+        "auc_weighted": 0.7956,
+        "auprc": 0.1173,
+        "sensitivity": 0.8435,
+        "specificity": 0.5603,
+        "ppv": 0.0807,
+        "npv": 0.9874,
+        "brier": 0.0402,
+        "ece": 0.0019,
+        "threshold": 0.032663
+      }
+    },
+    "auc_drop_vs_train": -0.0249,
+    "elapsed_sec": 1281.2
+  },
+  {
+    "model": "tabpfn",
+    "model_label": "TabPFN（表格基础模型）",
+    "disease": "ckd",
+    "name": "慢性肾病",
+    "n_train": 5000,
+    "n_full": 10264,
+    "n_features": 30,
+    "train_cv_auc": 0.758,
+    "train_cv_auc_weighted": 0.7451,
+    "validation": {
+      "internal_2017_2018": {
+        "n": 4810,
+        "auc": 0.7824,
+        "auc_weighted": 0.7623,
+        "auprc": 0.1837,
+        "sensitivity": 0.6755,
+        "specificity": 0.7674,
+        "ppv": 0.1057,
+        "npv": 0.9831,
+        "brier": 0.035,
+        "ece": 0.003,
+        "threshold": 0.038339
+      },
+      "external_2021_2023": {
+        "n": 5254,
+        "auc": 0.7797,
+        "auc_weighted": 0.8004,
+        "auprc": 0.153,
+        "sensitivity": 0.6138,
+        "specificity": 0.8178,
+        "ppv": 0.1116,
+        "npv": 0.9827,
+        "brier": 0.0326,
+        "ece": 0.0042,
+        "threshold": 0.05166
+      }
+    },
+    "auc_drop_vs_train": 0.0217,
+    "elapsed_sec": 1318.1
+  }
+]

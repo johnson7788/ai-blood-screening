@@ -1,0 +1,394 @@
+{
+  "hypertension": {
+    "name": "高血压",
+    "n_trajectories": 20,
+    "n_model_evals": 680,
+    "top": [
+      {
+        "feature": "年龄",
+        "mu_star": 0.6601,
+        "sigma": 0.23138,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "BMI",
+        "mu_star": 0.24322,
+        "sigma": 0.13643,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "肌酐",
+        "mu_star": 0.18582,
+        "sigma": 0.20453,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "钾",
+        "mu_star": 0.11769,
+        "sigma": 0.15309,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "尿素氮",
+        "mu_star": 0.10848,
+        "sigma": 0.0555,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "钙",
+        "mu_star": 0.10254,
+        "sigma": 0.03901,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "中性粒细胞%",
+        "mu_star": 0.09593,
+        "sigma": 0.15223,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "糖化血红蛋白",
+        "mu_star": 0.08133,
+        "sigma": 0.1034,
+        "direction": "降低↓"
+      }
+    ],
+    "figure": "morris_hypertension.png"
+  },
+  "diabetes": {
+    "name": "糖尿病",
+    "n_trajectories": 20,
+    "n_model_evals": 640,
+    "top": [
+      {
+        "feature": "年龄",
+        "mu_star": 0.44569,
+        "sigma": 0.36477,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "BMI",
+        "mu_star": 0.23616,
+        "sigma": 0.16827,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "生化甘油三酯",
+        "mu_star": 0.18463,
+        "sigma": 0.13134,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "钠",
+        "mu_star": 0.16398,
+        "sigma": 0.17434,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "钙",
+        "mu_star": 0.1546,
+        "sigma": 0.09257,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "生化总胆固醇",
+        "mu_star": 0.15404,
+        "sigma": 0.11896,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "白蛋白",
+        "mu_star": 0.12858,
+        "sigma": 0.12732,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "钾",
+        "mu_star": 0.11337,
+        "sigma": 0.09063,
+        "direction": "升高↑"
+      }
+    ],
+    "figure": "morris_diabetes.png"
+  },
+  "cancer": {
+    "name": "癌症",
+    "n_trajectories": 20,
+    "n_model_evals": 680,
+    "top": [
+      {
+        "feature": "年龄",
+        "mu_star": 0.21782,
+        "sigma": 0.08867,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "单核细胞%",
+        "mu_star": 0.04336,
+        "sigma": 0.04805,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "BMI",
+        "mu_star": 0.04165,
+        "sigma": 0.08776,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "MCV",
+        "mu_star": 0.03589,
+        "sigma": 0.04463,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "淋巴细胞%",
+        "mu_star": 0.02308,
+        "sigma": 0.0446,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "嗜酸细胞%",
+        "mu_star": 0.02005,
+        "sigma": 0.02618,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "MCH",
+        "mu_star": 0.01954,
+        "sigma": 0.01578,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "红细胞",
+        "mu_star": 0.01859,
+        "sigma": 0.02269,
+        "direction": "升高↑"
+      }
+    ],
+    "figure": "morris_cancer.png"
+  },
+  "chd": {
+    "name": "冠心病",
+    "n_trajectories": 20,
+    "n_model_evals": 680,
+    "top": [
+      {
+        "feature": "年龄",
+        "mu_star": 0.19432,
+        "sigma": 0.1688,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "总胆固醇",
+        "mu_star": 0.06648,
+        "sigma": 0.11499,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "尿酸",
+        "mu_star": 0.06095,
+        "sigma": 0.13557,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "淋巴细胞%",
+        "mu_star": 0.03944,
+        "sigma": 0.04175,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "钾",
+        "mu_star": 0.03876,
+        "sigma": 0.08006,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "血小板",
+        "mu_star": 0.03873,
+        "sigma": 0.0674,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "总胆红素",
+        "mu_star": 0.03642,
+        "sigma": 0.05398,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "嗜酸细胞%",
+        "mu_star": 0.03452,
+        "sigma": 0.04817,
+        "direction": "升高↑"
+      }
+    ],
+    "figure": "morris_chd.png"
+  },
+  "mi": {
+    "name": "心梗",
+    "n_trajectories": 20,
+    "n_model_evals": 680,
+    "top": [
+      {
+        "feature": "年龄",
+        "mu_star": 0.34402,
+        "sigma": 0.24753,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "生化总胆固醇",
+        "mu_star": 0.1233,
+        "sigma": 0.1484,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "RDW",
+        "mu_star": 0.07959,
+        "sigma": 0.07891,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "生化甘油三酯",
+        "mu_star": 0.0789,
+        "sigma": 0.06829,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "尿素氮",
+        "mu_star": 0.06398,
+        "sigma": 0.08652,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "MCHC",
+        "mu_star": 0.05552,
+        "sigma": 0.06731,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "单核细胞%",
+        "mu_star": 0.05439,
+        "sigma": 0.04653,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "红细胞压积",
+        "mu_star": 0.05233,
+        "sigma": 0.06848,
+        "direction": "升高↑"
+      }
+    ],
+    "figure": "morris_mi.png"
+  },
+  "stroke": {
+    "name": "中风",
+    "n_trajectories": 20,
+    "n_model_evals": 680,
+    "top": [
+      {
+        "feature": "年龄",
+        "mu_star": 0.214,
+        "sigma": 0.17035,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "尿酸",
+        "mu_star": 0.10316,
+        "sigma": 0.17298,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "RDW",
+        "mu_star": 0.08484,
+        "sigma": 0.0737,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "生化甘油三酯",
+        "mu_star": 0.0826,
+        "sigma": 0.13334,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "ALT",
+        "mu_star": 0.07875,
+        "sigma": 0.13804,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "AST",
+        "mu_star": 0.07102,
+        "sigma": 0.14011,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "嗜碱细胞%",
+        "mu_star": 0.0697,
+        "sigma": 0.11456,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "肌酐",
+        "mu_star": 0.06621,
+        "sigma": 0.10822,
+        "direction": "升高↑"
+      }
+    ],
+    "figure": "morris_stroke.png"
+  },
+  "ckd": {
+    "name": "慢性肾病",
+    "n_trajectories": 20,
+    "n_model_evals": 620,
+    "top": [
+      {
+        "feature": "年龄",
+        "mu_star": 0.21195,
+        "sigma": 0.17528,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "钾",
+        "mu_star": 0.20352,
+        "sigma": 0.14435,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "血红蛋白",
+        "mu_star": 0.13585,
+        "sigma": 0.16942,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "RDW",
+        "mu_star": 0.12492,
+        "sigma": 0.15303,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "MCHC",
+        "mu_star": 0.12274,
+        "sigma": 0.12074,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "红细胞",
+        "mu_star": 0.11178,
+        "sigma": 0.08273,
+        "direction": "降低↓"
+      },
+      {
+        "feature": "嗜酸细胞%",
+        "mu_star": 0.09843,
+        "sigma": 0.09168,
+        "direction": "升高↑"
+      },
+      {
+        "feature": "红细胞压积",
+        "mu_star": 0.09775,
+        "sigma": 0.13527,
+        "direction": "升高↑"
+      }
+    ],
+    "figure": "morris_ckd.png"
+  }
+}

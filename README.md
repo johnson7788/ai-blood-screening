@@ -79,6 +79,46 @@ NHANES 的糖尿病诊断基于血糖/HbA1c、肾病基于肌酐。若把同源�
 
 **血常规分类计数（单核细胞%、淋巴细胞%）进入 5/7 个病种的最优特征集**，与论文 1 强调血常规价值的结论一致。
 
+### 1.5 候选方案对比（TabPFN / EBM / AutoGluon）
+
+在同一队列划分与外部验证口径下比较了四种方法：
+
+| 排名 | 模型 | 平均外部 AUC | 训练样本 | 单病种耗时 | 可解释性 |
+|---|---|---|---|---|---|
+| 🥇 | **TabPFN** | **0.8206** | 5,000 | ≈20 分钟 | ❌ 黑盒 |
+| 🥈 | 堆叠集成（本仓库基线） | 0.8196 | ≈10.5k | 数秒 | SHAP |
+| 🥉 | **EBM** | 0.8170 | ≈10.5k | 数秒 | **✅ 玻璃盒** |
+| 4 | AutoGluon（受限） | 0.8151 | ≈10.5k | 40 秒 | 集成 |
+
+**三条结论**：
+
+1. **TabPFN 精度最高且只用不到一半训练数据**，5/7 病种优于全量基线，优势集中在基线的弱项（中风 +0.0066、慢性肾病 +0.0083）。但**存在三个硬约束**：训练样本不能超过约 5,000（本机 MPS 显存溢出、CPU 默认拒绝）、单病种推理约 20 分钟、完全黑盒。
+2. **EBM 以 0.0026 AUC 的代价换来完全可解释的玻璃盒**，且在中风上优于基线（+0.0045）。对需要临床可审计的场景是首选。
+3. **五个方法族全部落在 0.8091–0.8206 区间**（0.0115 宽度），说明**信号瓶颈**——继续试模型收益极低，真正的提升在纵向特征工程与标签质量。
+
+详细报告：[reports/compare_report.md](reports/compare_report.md)
+
+### 1.6 可解释性：三方交叉验证
+
+用三种原理不同的方法分析同一模型：**EBM 形状函数**（模型内在）、**SHAP**（博弈论归因）、**Morris 全局敏感性**（模型无关扰动）。
+
+| 病种 | Morris~EBM | Morris~SHAP | EBM~SHAP |
+|---|---|---|---|
+| 糖尿病 | **0.838** | **0.797** | **0.922** |
+| 高血压 | 0.665 | 0.661 | 0.894 |
+| 癌症 | 0.566 | 0.448 | 0.397 |
+| **中风** | **0.304** | **0.085** | **0.372** |
+
+**关键发现：方法分歧本身是诊断信号。** 中风的三方一致性最低（Morris~SHAP 仅 0.085），而它正是外部 AUC 最差的病种（0.7647）；糖尿病一致性最高，AUC 也最高（0.8856）。**可以把「三方一致性」当作无需额外验证数据的信号质量指标。**
+
+Morris 还额外给出**交互强度 σ**：癌症的 σ/μ\* 比值普遍在 2 左右，说明其风险因素作用高度条件化——这解释了 EBM 为何在癌症上自动学出「年龄×性别」交互项。
+
+详细报告：[reports/interpretability_report.md](reports/interpretability_report.md)
+
+![Morris 敏感性分析 μ*-σ 图](reports/figures/morris_stroke.png)
+
+![EBM 特征形状函数](reports/figures/ebm_shapes_hypertension.png)
+
 ---
 
 ## 二、快速开始
@@ -118,22 +158,32 @@ modelscope download --dataset InfoxmedModel/nhanes-blood-screening \
 
 ### 2.3 直接使用已训练模型
 
+模型有三种版本：`rfe12`（12 特征精简堆叠集成）、`full`（全特征堆叠集成）、
+`ebm`（**可解释玻璃盒模型**）。
+
 ```bash
-python predict.py --list --disease diabetes --input nhanes_wide.parquet
+python predict.py --list                                     # 列出全部模型
 
 python predict.py --disease diabetes --variant rfe12 \
                   --input nhanes_wide.parquet --output preds.csv
+
+python predict.py --disease diabetes --variant ebm \
+                  --input nhanes_wide.parquet --output preds_ebm.csv
 ```
 
 ```python
 from predict import load_model, predict_frame
 import pandas as pd
 
-model, spec = load_model("diabetes", "rfe12")   # 或 variant="full"
+model, spec = load_model("diabetes", "ebm")     # 或 "rfe12" / "full"
 df = pd.read_parquet("nhanes_wide.parquet")
 prob = predict_frame(model, spec, df)
-pred = (prob >= spec["threshold"]).astype(int)  # 阈值已按 Youden 指数标定
+pred = (prob >= spec["threshold"]).astype(int)  # 阈值按折外预测的 Youden 指数标定
 ```
+
+> **EBM 版本需要 `interpret` 包**（`pip install interpret==0.7.8`）。
+> 它的优势是**完全可加性**——可以直接导出每个特征的形状函数曲线（见 `src/ebm_explain.py`），
+> 精度代价仅 -0.0026 AUC。
 
 ### 2.4 从零复现
 
@@ -144,7 +194,28 @@ bash download_nhanes.sh                     # 获取原始数据（约 93 MB）
 .venv/bin/python src/multiclass.py          # 多分类任务
 .venv/bin/python src/shap_analysis.py       # SHAP 可解释性
 .venv/bin/python src/figures.py             # 可视化
-.venv/bin/python src/save_models.py         # 训练并保存模型
+.venv/bin/python src/save_models.py         # 训练并保存堆叠集成模型
+```
+
+可解释性分析（新增）：
+
+```bash
+.venv/bin/python src/ebm_explain.py         # EBM 形状函数 + 重要性（约 30 秒）
+.venv/bin/python src/morris_sensitivity.py  # Morris 全局敏感性（约 25 秒）
+.venv/bin/python src/save_ebm_models.py     # 保存 EBM 模型（约 1 分钟）
+```
+
+候选方案对比（新增，均为可选依赖）：
+
+```bash
+.venv/bin/python src/compare_models.py ebm          # EBM 对比（约 80 秒）
+
+# TabPFN：需先接受许可（https://ux.priorlabs.ai 的 Licenses 标签页）
+#         并挂代理（其权重托管在 huggingface.co）
+export TABPFN_TOKEN="<your-api-key>"
+export HTTPS_PROXY=http://127.0.0.1:7890
+export CMP_SUBSAMPLE=5000                            # 本机实测：>5000 不可行
+.venv/bin/python src/compare_models.py tabpfn        # 约 2.3 小时
 ```
 
 快速验证（单病种、跳过特征消除）：
@@ -184,20 +255,34 @@ ai-blood-screening/
 │   ├── multiclass.py            多分类任务
 │   ├── shap_analysis.py         SHAP 可解释性
 │   ├── figures.py               结果可视化
-│   └── save_models.py           训练并持久化模型
+│   ├── compare_models.py        候选方案公平对比（TabPFN/EBM/AutoGluon）
+│   ├── ebm_explain.py           EBM 形状函数与特征重要性导出
+│   ├── morris_sensitivity.py    Morris 全局敏感性分析
+│   ├── save_models.py           训练并持久化堆叠集成模型
+│   └── save_ebm_models.py       训练并持久化 EBM 可解释模型
 │
 ├── docs/
 │   └── data_card.md             数据集卡片（55 字段逐项说明）
 │
 └── reports/                     全部实验结果
-    ├── nhanes_report.md         实验报告（完整）
-    ├── summary.csv              汇总表
-    ├── results.json             全量结果（含 255 子集排名）
-    ├── multiclass.json          多分类结果
+    ├── nhanes_report.md         实验报告（堆叠集成主线）
+    ├── compare_report.md        **候选方案对比报告**
+    ├── interpretability_report.md  **可解释性三方交叉验证报告**
+    ├── summary.csv / results.json / multiclass.json
+    ├── compare_models*.json     各候选方案完整结果
     ├── leakage_table.csv        标签—禁用变量对照表
     ├── descriptive_stats.csv    加权/未加权描述统计
+    ├── ebm_importance_*.csv     EBM 特征重要性（含交互项）
+    ├── ebm_summary.json         EBM 汇总
+    ├── morris_*.csv             Morris μ / μ* / σ（含置信区间）
+    ├── morris_summary.json      Morris 汇总
     ├── shap_*.csv / shap_summary.json
-    └── figures/                 9 张图（7 张 ROC + 汇总 + 泄漏对照）
+    └── figures/                 23 张图
+        ├── roc_*.png            7 张 ROC 曲线
+        ├── summary.png          性能汇总
+        ├── leakage_control.png  标签泄漏对照
+        ├── ebm_shapes_*.png     7 张 EBM 形状函数
+        └── morris_*.png         7 张 Morris μ*-σ 图
 ```
 
 > `raw/`、`nhanes_wide.parquet`、`artifacts/models/` 由 ModelScope 提供，不在本仓库中。

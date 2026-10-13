@@ -1,0 +1,296 @@
+{
+  "hypertension": {
+    "name": "高血压",
+    "top": [
+      {
+        "feature": "年龄",
+        "importance": 0.8512,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "BMI",
+        "importance": 0.3303,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "钾",
+        "importance": 0.1377,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "钙",
+        "importance": 0.1365,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "肌酐",
+        "importance": 0.1227,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "糖化血红蛋白",
+        "importance": 0.1164,
+        "direction": "",
+        "type": "单特征"
+      }
+    ],
+    "figure": "ebm_shapes_hypertension.png"
+  },
+  "diabetes": {
+    "name": "糖尿病",
+    "top": [
+      {
+        "feature": "年龄",
+        "importance": 1.4046,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "BMI",
+        "importance": 0.379,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "生化甘油三酯",
+        "importance": 0.2721,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "生化总胆固醇",
+        "importance": 0.2448,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "钙",
+        "importance": 0.2348,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "总胆固醇",
+        "importance": 0.2097,
+        "direction": "",
+        "type": "单特征"
+      }
+    ],
+    "figure": "ebm_shapes_diabetes.png"
+  },
+  "cancer": {
+    "name": "癌症",
+    "top": [
+      {
+        "feature": "年龄",
+        "importance": 0.7719,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "RIDAGEYR & RIAGENDR",
+        "importance": 0.155,
+        "direction": "",
+        "type": "交互项"
+      },
+      {
+        "feature": "淋巴细胞%",
+        "importance": 0.0935,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "LBXRBCSI & RIDAGEYR",
+        "importance": 0.0815,
+        "direction": "",
+        "type": "交互项"
+      },
+      {
+        "feature": "MCV",
+        "importance": 0.0676,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "红细胞",
+        "importance": 0.0663,
+        "direction": "",
+        "type": "单特征"
+      }
+    ],
+    "figure": "ebm_shapes_cancer.png"
+  },
+  "chd": {
+    "name": "冠心病",
+    "top": [
+      {
+        "feature": "年龄",
+        "importance": 0.9546,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "血小板",
+        "importance": 0.1667,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "LBXMCVSI & RIDAGEYR",
+        "importance": 0.1524,
+        "direction": "",
+        "type": "交互项"
+      },
+      {
+        "feature": "生化总胆固醇",
+        "importance": 0.1481,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "性别",
+        "importance": 0.1431,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "总胆固醇",
+        "importance": 0.1253,
+        "direction": "",
+        "type": "单特征"
+      }
+    ],
+    "figure": "ebm_shapes_chd.png"
+  },
+  "mi": {
+    "name": "心梗",
+    "top": [
+      {
+        "feature": "年龄",
+        "importance": 1.0325,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "RDW",
+        "importance": 0.2046,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "性别",
+        "importance": 0.1617,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "生化总胆固醇",
+        "importance": 0.1423,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "肌酐",
+        "importance": 0.1255,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "尿素氮",
+        "importance": 0.1236,
+        "direction": "",
+        "type": "单特征"
+      }
+    ],
+    "figure": "ebm_shapes_mi.png"
+  },
+  "stroke": {
+    "name": "中风",
+    "top": [
+      {
+        "feature": "年龄",
+        "importance": 0.6052,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "肌酐",
+        "importance": 0.1053,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "RDW",
+        "importance": 0.0882,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "性别",
+        "importance": 0.0849,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "淋巴细胞%",
+        "importance": 0.0818,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "生化总胆固醇",
+        "importance": 0.0678,
+        "direction": "",
+        "type": "单特征"
+      }
+    ],
+    "figure": "ebm_shapes_stroke.png"
+  },
+  "ckd": {
+    "name": "慢性肾病",
+    "top": [
+      {
+        "feature": "年龄",
+        "importance": 0.2647,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "红细胞",
+        "importance": 0.1176,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "钾",
+        "importance": 0.0971,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "MCV",
+        "importance": 0.0877,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "淋巴细胞%",
+        "importance": 0.0873,
+        "direction": "",
+        "type": "单特征"
+      },
+      {
+        "feature": "红细胞压积",
+        "importance": 0.0866,
+        "direction": "",
+        "type": "单特征"
+      }
+    ],
+    "figure": "ebm_shapes_ckd.png"
+  }
+}
